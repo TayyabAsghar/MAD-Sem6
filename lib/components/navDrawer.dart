@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'logoutAlertBox.dart';
 
 class NavDrawer extends StatefulWidget {
   @override
@@ -7,7 +8,7 @@ class NavDrawer extends StatefulWidget {
 
 class _NavDrawer extends State<NavDrawer> {
   final _fontSize = 16.0;
-  int _selectedDestination = 0;
+  static int _selectedDestination = 0;
 
   void selectDestination(int index) {
     setState(() {
@@ -62,34 +63,47 @@ class _NavDrawer extends State<NavDrawer> {
           ),
         ),
         ListTile(
-          leading: Icon(Icons.person),
+          leading: Icon(Icons.calculate),
           title: Text(
-            'Profile',
+            'Prime or Composite',
             style: TextStyle(
               fontSize: _fontSize,
               color: _selectedDestination == 0 ? Colors.blue : Colors.grey[600],
             ),
           ),
+          selectedTileColor: Colors.black.withOpacity(.5),
           selected: _selectedDestination == 0,
           onTap: () {
-            selectDestination(0);
+            Navigator.pop(context);
+            if (_selectedDestination != 0) {
+              selectDestination(0);
+              Navigator.pushNamed(context, '/home');
+            }
           },
         ),
         ListTile(
-          leading: Icon(Icons.folder),
+          leading: Icon(Icons.collections),
           title: Text(
-            'My Files',
+            'Image Collection',
             style: TextStyle(
               fontSize: _fontSize,
               color: _selectedDestination == 1 ? Colors.blue : Colors.grey[600],
             ),
           ),
+          selectedTileColor: Colors.black.withOpacity(.5),
           selected: _selectedDestination == 1,
           onTap: () {
-            selectDestination(1);
+            Navigator.pop(context);
+
+            if (_selectedDestination != 1) {
+              selectDestination(1);
+              Navigator.pushNamed(context, '/collection');
+            }
+            //Navigator.pushReplacementNamed(context, '/collection');
           },
         ),
         ListTile(
+          enabled: false,
           leading: Icon(Icons.group),
           title: Text(
             'Shared with me',
@@ -104,6 +118,7 @@ class _NavDrawer extends State<NavDrawer> {
           },
         ),
         ListTile(
+          enabled: false,
           leading: Icon(Icons.schedule),
           title: Text(
             'Recent',
@@ -118,6 +133,7 @@ class _NavDrawer extends State<NavDrawer> {
           },
         ),
         ListTile(
+          enabled: false,
           leading: Icon(Icons.delete),
           title: Text(
             'Trash',
@@ -136,6 +152,7 @@ class _NavDrawer extends State<NavDrawer> {
           thickness: 1,
         ),
         ListTile(
+          enabled: false,
           leading: Icon(Icons.settings),
           title: Text(
             'Settings',
@@ -147,10 +164,10 @@ class _NavDrawer extends State<NavDrawer> {
           selected: _selectedDestination == 5,
           onTap: () {
             selectDestination(5);
-            //
           },
         ),
         ListTile(
+          enabled: false,
           leading: Icon(Icons.help_center),
           title: Text(
             'Help',
@@ -169,6 +186,7 @@ class _NavDrawer extends State<NavDrawer> {
           thickness: 1,
         ),
         ListTile(
+          enabled: false,
           leading: Icon(Icons.logout),
           title: Text(
             'Logout',
