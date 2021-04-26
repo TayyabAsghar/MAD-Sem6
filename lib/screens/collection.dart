@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import '../utils/data.dart';
-import '../utils/constants.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
 class Collection extends StatefulWidget {
@@ -12,11 +10,9 @@ class _CollectionState extends State<Collection> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: gradientEndColor,
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [gradientStartColor, gradientEndColor],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             stops: [0.3, 0.7],
@@ -69,7 +65,6 @@ class _CollectionState extends State<Collection> {
                 height: 500,
                 padding: EdgeInsets.only(left: 32.0),
                 child: Swiper(
-                  itemCount: planets.length,
                   itemWidth: MediaQuery.of(context).size.width - 2 * 64,
                   layout: SwiperLayout.STACK,
                   pagination: SwiperPagination(
