@@ -71,7 +71,7 @@ class _NavDrawer extends State<NavDrawer> {
               color: _selectedDestination == 0 ? Colors.blue : Colors.grey[600],
             ),
           ),
-          selectedTileColor: Colors.black.withOpacity(.5),
+          selectedTileColor: Colors.blue.withOpacity(.3),
           selected: _selectedDestination == 0,
           onTap: () {
             Navigator.pop(context);
@@ -90,7 +90,7 @@ class _NavDrawer extends State<NavDrawer> {
               color: _selectedDestination == 1 ? Colors.blue : Colors.grey[600],
             ),
           ),
-          selectedTileColor: Colors.black.withOpacity(.5),
+          selectedTileColor: Colors.blue.withOpacity(.3),
           selected: _selectedDestination == 1,
           onTap: () {
             Navigator.pop(context);
@@ -111,11 +111,7 @@ class _NavDrawer extends State<NavDrawer> {
               color: _selectedDestination == 2 ? Colors.blue : Colors.grey[600],
             ),
           ),
-          trailing: Icon(
-            Icons.new_releases,
-            color: Colors.red,
-          ),
-          selectedTileColor: Colors.black.withOpacity(.5),
+          selectedTileColor: Colors.blue.withOpacity(.3),
           selected: _selectedDestination == 2,
           onTap: () {
             Navigator.pop(context);
