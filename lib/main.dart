@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screens/home.dart';
 import 'screens/collection.dart';
+import 'screens/transaction.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/home': (context) => Home(),
         '/collection': (context) => Collection(),
+        '/transaction': (context) => Transaction(),
       },
     );
   }

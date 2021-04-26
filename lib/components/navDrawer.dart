@@ -103,18 +103,27 @@ class _NavDrawer extends State<NavDrawer> {
           },
         ),
         ListTile(
-          enabled: false,
-          leading: Icon(Icons.group),
+          leading: Icon(Icons.receipt_long_outlined),
           title: Text(
-            'Shared with me',
+            'Transaction',
             style: TextStyle(
               fontSize: _fontSize,
               color: _selectedDestination == 2 ? Colors.blue : Colors.grey[600],
             ),
           ),
+          trailing: Icon(
+            Icons.new_releases,
+            color: Colors.red,
+          ),
+          selectedTileColor: Colors.black.withOpacity(.5),
           selected: _selectedDestination == 2,
           onTap: () {
-            selectDestination(2);
+            Navigator.pop(context);
+
+            if (_selectedDestination != 2) {
+              selectDestination(2);
+              Navigator.pushNamed(context, '/transaction');
+            }
           },
         ),
         ListTile(
@@ -127,6 +136,7 @@ class _NavDrawer extends State<NavDrawer> {
               color: _selectedDestination == 3 ? Colors.blue : Colors.grey[600],
             ),
           ),
+          selectedTileColor: Colors.black.withOpacity(.5),
           selected: _selectedDestination == 3,
           onTap: () {
             selectDestination(3);
@@ -142,6 +152,7 @@ class _NavDrawer extends State<NavDrawer> {
               color: _selectedDestination == 4 ? Colors.blue : Colors.grey[600],
             ),
           ),
+          selectedTileColor: Colors.black.withOpacity(.5),
           selected: _selectedDestination == 4,
           onTap: () {
             selectDestination(4);
@@ -161,6 +172,7 @@ class _NavDrawer extends State<NavDrawer> {
               color: _selectedDestination == 5 ? Colors.blue : Colors.grey[600],
             ),
           ),
+          selectedTileColor: Colors.black.withOpacity(.5),
           selected: _selectedDestination == 5,
           onTap: () {
             selectDestination(5);
@@ -176,6 +188,7 @@ class _NavDrawer extends State<NavDrawer> {
               color: _selectedDestination == 6 ? Colors.blue : Colors.grey[600],
             ),
           ),
+          selectedTileColor: Colors.black.withOpacity(.5),
           selected: _selectedDestination == 6,
           onTap: () {
             selectDestination(6);
@@ -195,6 +208,7 @@ class _NavDrawer extends State<NavDrawer> {
               color: _selectedDestination == 7 ? Colors.blue : Colors.grey[600],
             ),
           ),
+          selectedTileColor: Colors.black.withOpacity(.5),
           selected: _selectedDestination == 7,
           onTap: () {
             selectDestination(7);
