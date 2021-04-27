@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'logoutAlertBox.dart';
+import 'customAlertDialog.dart';
 
 class NavDrawer extends StatefulWidget {
   @override
@@ -180,18 +180,26 @@ class _NavDrawer extends State<NavDrawer> {
           thickness: 1,
         ),
         ListTile(
-          enabled: false,
           leading: Icon(Icons.logout),
           title: Text(
             'Logout',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _currentRoute == '' ? Colors.blue : Colors.grey[600],
+              color: Colors.grey[600],
             ),
           ),
           selectedTileColor: Colors.black.withOpacity(.5),
-          selected: _currentRoute == '',
-          onTap: () {},
+          //selected: _currentRoute == '',
+          onTap: () {
+            showDialog(
+              context: context,
+              builder: (context) {
+                return CustomAlertDialog(
+                    title: 'Confirmation',
+                    content: 'Are you sure, you wants to logout?');
+              },
+            );
+          },
         ),
       ],
     );
