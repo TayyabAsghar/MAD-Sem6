@@ -8,16 +8,11 @@ class NavDrawer extends StatefulWidget {
 
 class _NavDrawer extends State<NavDrawer> {
   final _fontSize = 16.0;
-  static int _selectedDestination = 0;
-
-  void selectDestination(int index) {
-    setState(() {
-      _selectedDestination = index;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
+    final _currentRoute = ModalRoute.of(context).settings.name;
+
     return ListView(
       padding: EdgeInsets.zero,
       children: [
@@ -68,17 +63,14 @@ class _NavDrawer extends State<NavDrawer> {
             'Prime or Composite',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _selectedDestination == 0 ? Colors.blue : Colors.grey[600],
+              color: _currentRoute == '/home' ? Colors.blue : Colors.grey[600],
             ),
           ),
           selectedTileColor: Colors.blue.withOpacity(.3),
-          selected: _selectedDestination == 0,
+          selected: _currentRoute == '/home',
           onTap: () {
             Navigator.pop(context);
-            if (_selectedDestination != 0) {
-              selectDestination(0);
-              Navigator.pushNamed(context, '/home');
-            }
+            if (_currentRoute != '/home') Navigator.pushNamed(context, '/home');
           },
         ),
         ListTile(
@@ -87,18 +79,19 @@ class _NavDrawer extends State<NavDrawer> {
             'Image Collection',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _selectedDestination == 1 ? Colors.blue : Colors.grey[600],
+              color: _currentRoute == '/collection'
+                  ? Colors.blue
+                  : Colors.grey[600],
             ),
           ),
           selectedTileColor: Colors.blue.withOpacity(.3),
-          selected: _selectedDestination == 1,
+          selected: _currentRoute == '/collection',
           onTap: () {
             Navigator.pop(context);
 
-            if (_selectedDestination != 1) {
-              selectDestination(1);
+            if (_currentRoute != '/collection')
               Navigator.pushNamed(context, '/collection');
-            }
+
             //Navigator.pushReplacementNamed(context, '/collection');
           },
         ),
@@ -108,18 +101,18 @@ class _NavDrawer extends State<NavDrawer> {
             'Transaction',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _selectedDestination == 2 ? Colors.blue : Colors.grey[600],
+              color: _currentRoute == '/transaction'
+                  ? Colors.blue
+                  : Colors.grey[600],
             ),
           ),
           selectedTileColor: Colors.blue.withOpacity(.3),
-          selected: _selectedDestination == 2,
+          selected: _currentRoute == '/transaction',
           onTap: () {
             Navigator.pop(context);
 
-            if (_selectedDestination != 2) {
-              selectDestination(2);
+            if (_currentRoute != '/transaction')
               Navigator.pushNamed(context, '/transaction');
-            }
           },
         ),
         ListTile(
@@ -129,14 +122,12 @@ class _NavDrawer extends State<NavDrawer> {
             'Recent',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _selectedDestination == 3 ? Colors.blue : Colors.grey[600],
+              color: _currentRoute == '' ? Colors.blue : Colors.grey[600],
             ),
           ),
           selectedTileColor: Colors.black.withOpacity(.5),
-          selected: _selectedDestination == 3,
-          onTap: () {
-            selectDestination(3);
-          },
+          selected: _currentRoute == '',
+          onTap: () {},
         ),
         ListTile(
           enabled: false,
@@ -145,14 +136,12 @@ class _NavDrawer extends State<NavDrawer> {
             'Trash',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _selectedDestination == 4 ? Colors.blue : Colors.grey[600],
+              color: _currentRoute == '' ? Colors.blue : Colors.grey[600],
             ),
           ),
           selectedTileColor: Colors.black.withOpacity(.5),
-          selected: _selectedDestination == 4,
-          onTap: () {
-            selectDestination(4);
-          },
+          selected: _currentRoute == '',
+          onTap: () {},
         ),
         Divider(
           height: 1,
@@ -165,14 +154,12 @@ class _NavDrawer extends State<NavDrawer> {
             'Settings',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _selectedDestination == 5 ? Colors.blue : Colors.grey[600],
+              color: _currentRoute == '' ? Colors.blue : Colors.grey[600],
             ),
           ),
           selectedTileColor: Colors.black.withOpacity(.5),
-          selected: _selectedDestination == 5,
-          onTap: () {
-            selectDestination(5);
-          },
+          selected: _currentRoute == '',
+          onTap: () {},
         ),
         ListTile(
           enabled: false,
@@ -181,14 +168,12 @@ class _NavDrawer extends State<NavDrawer> {
             'Help',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _selectedDestination == 6 ? Colors.blue : Colors.grey[600],
+              color: _currentRoute == '' ? Colors.blue : Colors.grey[600],
             ),
           ),
           selectedTileColor: Colors.black.withOpacity(.5),
-          selected: _selectedDestination == 6,
-          onTap: () {
-            selectDestination(6);
-          },
+          selected: _currentRoute == '',
+          onTap: () {},
         ),
         Divider(
           height: 1,
@@ -201,14 +186,12 @@ class _NavDrawer extends State<NavDrawer> {
             'Logout',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _selectedDestination == 7 ? Colors.blue : Colors.grey[600],
+              color: _currentRoute == '' ? Colors.blue : Colors.grey[600],
             ),
           ),
           selectedTileColor: Colors.black.withOpacity(.5),
-          selected: _selectedDestination == 7,
-          onTap: () {
-            selectDestination(7);
-          },
+          selected: _currentRoute == '',
+          onTap: () {},
         ),
       ],
     );
