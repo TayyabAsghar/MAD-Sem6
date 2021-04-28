@@ -103,50 +103,47 @@ class _TransactionState extends State<Transaction> {
         child: NavDrawer(),
       ),
       body: ListView(
-        padding: EdgeInsets.zero,
+        padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
         children: [
-          Padding(
-            padding: EdgeInsets.only(top: 10.0),
-            child: CustomCard(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Sort by',
-                    style: TextStyle(fontSize: 24),
-                  ),
-                  DropdownButton<String>(
-                    value: _dropdownValue,
-                    isExpanded: true,
-                    items: [
-                      'Newest First',
-                      'Oldest First',
-                      'Value High-Low',
-                      'Value Low-High',
-                    ]
-                        .map(
-                          (val) => DropdownMenuItem(
-                            value: val,
-                            child: Text(
-                              val,
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 18,
-                              ),
+          CustomCard(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Sort by',
+                  style: TextStyle(fontSize: 24),
+                ),
+                DropdownButton<String>(
+                  value: _dropdownValue,
+                  isExpanded: true,
+                  items: [
+                    'Newest First',
+                    'Oldest First',
+                    'Value High-Low',
+                    'Value Low-High',
+                  ]
+                      .map(
+                        (val) => DropdownMenuItem(
+                          value: val,
+                          child: Text(
+                            val,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 18,
                             ),
                           ),
-                        )
-                        .toList(),
-                    onChanged: (String val) => setState(
-                      () => _dropdownValue = val,
-                    ),
-                    underline: Container(
-                      height: 2,
-                      color: Colors.blue,
-                    ),
+                        ),
+                      )
+                      .toList(),
+                  onChanged: (String val) => setState(
+                    () => _dropdownValue = val,
                   ),
-                ],
-              ),
+                  underline: Container(
+                    height: 2,
+                    color: Colors.blue,
+                  ),
+                ),
+              ],
             ),
           ),
           CustomCard(
@@ -257,56 +254,53 @@ class _TransactionState extends State<Transaction> {
               ],
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(bottom: 10.0),
-            child: CustomCard(
-              child: Column(
-                children: [
-                  CheckBoxList(
-                    children: [
-                      'Credit',
-                      'Consultant Notes Only',
-                      'Date Range',
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Flexible(
-                        child: Padding(
-                          padding: EdgeInsets.only(
-                            left: 22.0,
-                            right: 10.0,
+          CustomCard(
+            child: Column(
+              children: [
+                CheckBoxList(
+                  children: [
+                    'Credit',
+                    'Consultant Notes Only',
+                    'Date Range',
+                  ],
+                ),
+                Row(
+                  children: [
+                    Flexible(
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                          left: 22.0,
+                          right: 10.0,
+                        ),
+                        child: TextField(
+                          controller: fromController,
+                          decoration: InputDecoration(
+                            labelText: 'From',
                           ),
-                          child: TextField(
-                            controller: fromController,
-                            decoration: InputDecoration(
-                              labelText: 'From',
-                            ),
-                            keyboardType: TextInputType.datetime,
-                            onTap: () => datePicker(fromController),
-                          ),
+                          keyboardType: TextInputType.datetime,
+                          onTap: () => datePicker(fromController),
                         ),
                       ),
-                      Flexible(
-                        child: Padding(
-                          padding: EdgeInsets.only(
-                            left: 10.0,
-                            right: 22.0,
+                    ),
+                    Flexible(
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                          left: 10.0,
+                          right: 22.0,
+                        ),
+                        child: TextFormField(
+                          controller: toController,
+                          decoration: InputDecoration(
+                            labelText: 'To',
                           ),
-                          child: TextFormField(
-                            controller: toController,
-                            decoration: InputDecoration(
-                              labelText: 'To',
-                            ),
-                            keyboardType: TextInputType.datetime,
-                            onTap: () => datePicker(toController),
-                          ),
+                          keyboardType: TextInputType.datetime,
+                          onTap: () => datePicker(toController),
                         ),
                       ),
-                    ],
-                  ),
-                ],
-              ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
         ],
