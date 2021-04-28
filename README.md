@@ -1,16 +1,41 @@
-# mobile_app_dev_sem_6
+![GitHub watchers](https://img.shields.io/github/watchers/TayyabAsghar/MAD-Sem6?style=social)
+[![GitHub forks](https://img.shields.io/github/forks/TayyabAsghar/MAD-Sem6?logo=github&style=social)](https://github.com/TayyabAsghar/MAD-Sem6/network)
+[![GitHub stars](https://img.shields.io/github/stars/TayyabAsghar/MAD-Sem6?logo=github&style=social)](https://github.com/TayyabAsghar/MAD-Sem6/stargazers)
+![GitHub all releases](https://img.shields.io/github/downloads/TayyabAsghar/MAD-Sem6/total?logo=github&style=social)
 
-A new Flutter project.
+<a href= "https://github.com/TayyabAsghar/MAD-Sem6/blob/master/assets/icons/android.png">
+<img src="assets/icons/android.png" alt="drawing" width="200"/>
+</a>
 
-## Getting Started
+# 🔍 Overview
 
-This project is a starting point for a Flutter application.
+MAD-Sem6 is a Mobile Development Course Project that contains `Basic` ➡️ `Medium` implementation of different widgets. As a whole it doesn't make any sense as it is made according to given assignments to learn different widgets. Each screen is different from other.
 
-A few resources to get you started if this is your first Flutter project:
+# 📱 Screens
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+These are some screens and features that has been implemented.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# ↓ Installation for 🐱‍💻 Development
+
+System prerequisites
+
+- [Flutter SDK][fsdk]
+- [Android Studio][astudio]
+
+Clone and change into the project
+
+```sh
+$ git clone https://github.com/TayyabAsghar/MAD-Sem6.git
+$ cd mobile_app_dev_sem_6
+```
+
+Install packages
+
+```sh
+$ flutter pub get
+```
+
+Start developing!
+
+[fsdk]: https://flutter.dev/docs/get-started/install
+[astudio]: https://developer.android.com/studio
