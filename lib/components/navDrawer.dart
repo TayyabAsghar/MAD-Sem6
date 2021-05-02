@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import 'customAlertDialog.dart';
 
-class NavDrawer extends StatefulWidget {
-  @override
-  _NavDrawer createState() => _NavDrawer();
-}
-
-class _NavDrawer extends State<NavDrawer> {
+class NavDrawer extends StatelessWidget {
   final _fontSize = 16.0;
 
   @override
