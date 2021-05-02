@@ -1,20 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CustomAlertDialog extends StatefulWidget {
+class CustomAlertDialog extends StatelessWidget {
   CustomAlertDialog({@required this.title, @required this.content});
 
   final title;
   final content;
 
   @override
-  _CustomAlertDialogState createState() => _CustomAlertDialogState();
-}
-
-class _CustomAlertDialogState extends State<CustomAlertDialog> {
-  @override
   Widget build(BuildContext context) {
-    final title = widget.title;
-    final content = widget.content;
     return AlertDialog(
       elevation: 24.0,
       backgroundColor: Colors.white,
