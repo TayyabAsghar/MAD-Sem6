@@ -16,8 +16,8 @@ class CheckBoxList extends StatefulWidget {
 class _CheckBoxListState extends State<CheckBoxList> {
   @override
   Widget build(BuildContext context) {
-    var children = widget.children;
-    var values = widget.values;
+    final children = widget.children;
+    final values = widget.values;
 
     return Column(
       children: children.map(
