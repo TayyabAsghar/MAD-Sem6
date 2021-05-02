@@ -6,16 +6,11 @@ import '../components/checkBoxList.dart';
 import '../components/transactionToggle.dart';
 import '../components/customAlertDialog.dart';
 
-class CustomCard extends StatefulWidget {
+class CustomCard extends StatelessWidget {
   CustomCard({@required this.child});
 
-  final Widget child;
+  final child;
 
-  @override
-  _CustomCardState createState() => _CustomCardState();
-}
-
-class _CustomCardState extends State<CustomCard> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -25,7 +20,7 @@ class _CustomCardState extends State<CustomCard> {
         color: Colors.white,
         child: Padding(
           padding: EdgeInsets.all(10.0),
-          child: widget.child,
+          child: child,
         ),
       ),
     );

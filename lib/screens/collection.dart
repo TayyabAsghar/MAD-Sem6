@@ -2,12 +2,7 @@ import 'package:flutter/material.dart';
 import '../components/navDrawer.dart';
 import '../components/simpleCard.dart';
 
-class Collection extends StatefulWidget {
-  @override
-  _CollectionState createState() => _CollectionState();
-}
-
-class _CollectionState extends State<Collection> {
+class Collection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
