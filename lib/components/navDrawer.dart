@@ -61,10 +61,8 @@ class NavDrawer extends StatelessWidget {
           ),
           selectedTileColor: Theme.of(context).primaryColor.withOpacity(0.3),
           selected: _currentRoute == '/home',
-          onTap: () {
-            Navigator.pop(context);
-            if (_currentRoute != '/home') Navigator.pushNamed(context, '/home');
-          },
+          onTap: () =>
+              Navigator.popUntil(context, ModalRoute.withName('/home')),
         ),
         ListTile(
           leading: Icon(Icons.collections),
