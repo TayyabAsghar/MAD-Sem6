@@ -7,7 +7,7 @@ class NavDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _currentRoute = ModalRoute.of(context).settings.name;
-    final subTiles = ['/record'];
+    final subTiles = ['/customer'];
 
     return ListView(
       padding: EdgeInsets.zero,
