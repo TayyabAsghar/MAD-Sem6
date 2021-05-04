@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'screens/home.dart';
 import 'screens/collection.dart';
 import 'screens/transaction.dart';
-import 'screens/record.dart';
+import 'screens/customer.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         '/home': (context) => Home(),
         '/collection': (context) => Collection(),
         '/transaction': (context) => Transaction(),
-        '/record': (context) => Record(),
+        '/customer': (context) => Customer(),
       },
     );
   }

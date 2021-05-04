@@ -105,19 +105,19 @@ class NavDrawer extends StatelessWidget {
         ExpansionTile(
           leading: Icon(Icons.storage),
           title: Text(
-            'Records',
+            'Customer Records',
             style: TextStyle(
               fontSize: _fontSize,
               color:
-                  _currentRoute == '/record' ? Colors.blue : Colors.grey[600],
+                  _currentRoute == '/customer' ? Colors.blue : Colors.grey[600],
             ),
           ),
           initiallyExpanded: subTiles.contains(_currentRoute),
           onExpansionChanged: (val) {
             Navigator.pop(context);
 
-            if (_currentRoute != '/record')
-              Navigator.pushNamed(context, '/record');
+            if (_currentRoute != '/customer')
+              Navigator.pushNamed(context, '/customer');
           },
           children: [
             ListTile(
