@@ -7,7 +7,10 @@ class NavDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _currentRoute = ModalRoute.of(context).settings.name;
-    final subTiles = ['/customer'];
+    final subTiles = [
+      '/customer',
+      '/viewCustomer',
+    ];
 
     return ListView(
       padding: EdgeInsets.zero,
@@ -130,14 +133,19 @@ class NavDrawer extends StatelessWidget {
                 'View Records',
                 style: TextStyle(
                   fontSize: _fontSize,
-                  color: _currentRoute == ''
+                  color: _currentRoute == '/viewCustomer'
                       ? Theme.of(context).primaryColor
                       : Colors.grey[600],
                 ),
               ),
               selectedTileColor: Theme.of(context).primaryColor.withOpacity(.5),
-              selected: _currentRoute == '',
-              onTap: () {},
+              selected: _currentRoute == '/viewCustomer',
+              onTap: () {
+                Navigator.pop(context);
+
+                if (_currentRoute != '/viewCustomer')
+                  Navigator.pushNamed(context, '/viewCustomer');
+              },
             ),
             ListTile(
               contentPadding: EdgeInsets.only(left: 32),
