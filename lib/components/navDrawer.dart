@@ -117,8 +117,6 @@ class NavDrawer extends StatelessWidget {
                   : Colors.grey[600],
             ),
           ),
-          collapsedBackgroundColor:
-              Theme.of(context).primaryColor.withOpacity(0.3),
           initiallyExpanded: subTiles.contains(_currentRoute),
           onExpansionChanged: (val) {
             Navigator.pop(context);
