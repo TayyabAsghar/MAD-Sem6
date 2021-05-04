@@ -119,6 +119,8 @@ class NavDrawer extends StatelessWidget {
                   : Colors.grey[600],
             ),
           ),
+          collapsedBackgroundColor:
+              Theme.of(context).primaryColor.withOpacity(0.3),
           initiallyExpanded: subTiles.contains(_currentRoute),
           onExpansionChanged: (val) {
             Navigator.pop(context);
@@ -139,7 +141,8 @@ class NavDrawer extends StatelessWidget {
                       : Colors.grey[600],
                 ),
               ),
-              selectedTileColor: Theme.of(context).primaryColor.withOpacity(.5),
+              selectedTileColor:
+                  Theme.of(context).primaryColor.withOpacity(0.3),
               selected: _currentRoute == '/view-consumers',
               onTap: () {
                 Navigator.pop(context);
@@ -160,7 +163,8 @@ class NavDrawer extends StatelessWidget {
                       : Colors.grey[600],
                 ),
               ),
-              selectedTileColor: Theme.of(context).primaryColor.withOpacity(.5),
+              selectedTileColor:
+                  Theme.of(context).primaryColor.withOpacity(0.3),
               selected: _currentRoute == '',
               onTap: () {
                 Navigator.pop(context);
@@ -183,7 +187,7 @@ class NavDrawer extends StatelessWidget {
                   : Colors.grey[600],
             ),
           ),
-          selectedTileColor: Theme.of(context).primaryColor.withOpacity(.5),
+          selectedTileColor: Theme.of(context).primaryColor.withOpacity(0.3),
           selected: _currentRoute == '',
           onTap: () {},
         ),
@@ -203,7 +207,7 @@ class NavDrawer extends StatelessWidget {
                   : Colors.grey[600],
             ),
           ),
-          selectedTileColor: Theme.of(context).primaryColor.withOpacity(.5),
+          selectedTileColor: Theme.of(context).primaryColor.withOpacity(0.3),
           selected: _currentRoute == '',
           onTap: () {},
         ),
@@ -219,7 +223,7 @@ class NavDrawer extends StatelessWidget {
                   : Colors.grey[600],
             ),
           ),
-          selectedTileColor: Theme.of(context).primaryColor.withOpacity(.5),
+          selectedTileColor: Theme.of(context).primaryColor.withOpacity(0.3),
           selected: _currentRoute == '',
           onTap: () {},
         ),
@@ -238,7 +242,7 @@ class NavDrawer extends StatelessWidget {
                   : Colors.grey[600],
             ),
           ),
-          selectedTileColor: Theme.of(context).primaryColor.withOpacity(.5),
+          selectedTileColor: Theme.of(context).primaryColor.withOpacity(0.3),
           //selected: _currentRoute == '',
           onTap: () {
             showDialog(
