@@ -73,6 +73,20 @@ class _AddConsumersState extends State<AddConsumers> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Add Consumers'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.visibility_sharp),
+            onPressed: () =>
+                Navigator.popAndPushNamed(context, '/view-consumers'),
+          ),
+          IconButton(
+            icon: Icon(Icons.people),
+            onPressed: () => Navigator.popUntil(
+              context,
+              ModalRoute.withName('/consumers'),
+            ),
+          )
+        ],
       ),
       drawer: Drawer(
         child: NavDrawer(),
