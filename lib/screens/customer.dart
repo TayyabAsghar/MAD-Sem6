@@ -11,7 +11,28 @@ class Customer extends StatelessWidget {
       drawer: Drawer(
         child: NavDrawer(),
       ),
-      body: Container(),
+      body: Container(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Hero(
+                tag: 'Logo',
+                child: Image.asset(
+                  'assets/images/Customer.jpg',
+                  width: 300,
+                ),
+              ),
+              SizedBox(height: 20),
+              Text(
+                'Manage Customers Data',
+                style: TextStyle(fontSize: 20),
+                textAlign: TextAlign.center,
+              )
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
