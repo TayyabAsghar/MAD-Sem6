@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import '../components/navDrawer.dart';
 
-class Customer extends StatelessWidget {
+class Consumers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Customer Records'),
+        title: Text('Consumers Records'),
       ),
       drawer: Drawer(
         child: NavDrawer(),
@@ -25,7 +25,7 @@ class Customer extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Text(
-                'Manage Customers Data',
+                'Manage Consumers Data',
                 style: TextStyle(fontSize: 20),
                 textAlign: TextAlign.center,
               )

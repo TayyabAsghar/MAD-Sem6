@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import '../components/navDrawer.dart';
 
-class ViewCustomers extends StatelessWidget {
+class ViewConsumers extends StatelessWidget {
   Future fetchCostumers() async {
     final response = await http.get(fetchApiURI);
 
@@ -18,16 +18,17 @@ class ViewCustomers extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('View Customers'),
+        title: Text('View Consumers'),
         actions: [
           IconButton(
             icon: Icon(Icons.add),
-            onPressed: () => Navigator.popAndPushNamed(context, '/add-subject'),
+            onPressed: () =>
+                Navigator.popAndPushNamed(context, '/add-consumers'),
           ),
           IconButton(
             icon: Icon(Icons.home),
             onPressed: () =>
-                Navigator.popUntil(context, ModalRoute.withName('/')),
+                Navigator.popUntil(context, ModalRoute.withName('/consumers')),
           )
         ],
       ),
@@ -65,10 +66,10 @@ class ViewCustomers extends StatelessWidget {
                             showBottomBorder: true,
                             // columnSpacing: 100,
                             columns: [
-                              DataColumn(label: Text('firstName')),
-                              DataColumn(label: Text('lastName')),
-                              DataColumn(label: Text('email')),
-                              DataColumn(label: Text('phone')),
+                              DataColumn(label: Text('First Name')),
+                              DataColumn(label: Text('Last Name')),
+                              DataColumn(label: Text('Email')),
+                              DataColumn(label: Text('Phone')),
                             ],
                             rows: filteredList
                                 .map<DataRow>(

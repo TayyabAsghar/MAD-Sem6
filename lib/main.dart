@@ -3,9 +3,9 @@ import 'theme/ui.dart';
 import 'screens/home.dart';
 import 'screens/collection.dart';
 import 'screens/transaction.dart';
-import 'screens/customer.dart';
-import 'screens/viewCustomers.dart';
-import 'screens/addCustomers.dart';
+import 'screens/consumers.dart';
+import 'screens/viewConsumers.dart';
+import 'screens/addConsumers.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,9 +25,9 @@ class MyApp extends StatelessWidget {
         '/home': (context) => Home(),
         '/collection': (context) => Collection(),
         '/transaction': (context) => Transaction(),
-        '/customer': (context) => Customer(),
-        '/viewCustomers': (context) => ViewCustomers(),
-        '/addCustomers': (context) => AddCustomer(),
+        '/consumers': (context) => Consumers(),
+        '/view-consumers': (context) => ViewConsumers(),
+        '/add-consumers': (context) => AddConsumers(),
       },
     );
   }

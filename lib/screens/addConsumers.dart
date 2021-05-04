@@ -5,19 +5,19 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import '../components/customAlertDialog.dart';
 
-class AddCustomer extends StatefulWidget {
+class AddConsumers extends StatefulWidget {
   @override
-  _AddCustomerState createState() => _AddCustomerState();
+  _AddConsumersState createState() => _AddConsumersState();
 }
 
-class _AddCustomerState extends State<AddCustomer> {
+class _AddConsumersState extends State<AddConsumers> {
   final fNameController = TextEditingController();
   final lNameController = TextEditingController();
   final emailController = TextEditingController();
   final phoneController = TextEditingController();
   String genderController = 'Male';
 
-  Future sendCustomersData() async {
+  Future sendConsumersData() async {
     if (fNameController.text.isNotEmpty &&
         lNameController.text.isNotEmpty &&
         emailController.text.isNotEmpty &&
@@ -72,7 +72,7 @@ class _AddCustomerState extends State<AddCustomer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Customer'),
+        title: Text('Add Consumers'),
       ),
       drawer: Drawer(
         child: NavDrawer(),
@@ -160,7 +160,7 @@ class _AddCustomerState extends State<AddCustomer> {
               Padding(
                 padding: const EdgeInsets.all(15),
                 child: ElevatedButton(
-                  onPressed: sendCustomersData,
+                  onPressed: sendConsumersData,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
@@ -168,7 +168,7 @@ class _AddCustomerState extends State<AddCustomer> {
                       children: [
                         Icon(Icons.add),
                         Text(
-                          'Add Customer',
+                          'Add Consumers',
                           style: TextStyle(fontSize: 20),
                         ),
                       ],

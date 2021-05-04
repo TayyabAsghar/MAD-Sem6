@@ -8,9 +8,9 @@ class NavDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     final _currentRoute = ModalRoute.of(context).settings.name;
     final subTiles = [
-      '/customer',
-      '/viewCustomers,',
-      '/addCustomers',
+      '/consumers',
+      '/view-consumers',
+      '/add-consumers',
     ];
 
     return ListView(
@@ -111,10 +111,10 @@ class NavDrawer extends StatelessWidget {
         ExpansionTile(
           leading: Icon(Icons.storage),
           title: Text(
-            'Customer Records',
+            'Consumers Records',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _currentRoute == '/customer'
+              color: _currentRoute == '/consumers'
                   ? Theme.of(context).primaryColor
                   : Colors.grey[600],
             ),
@@ -123,39 +123,39 @@ class NavDrawer extends StatelessWidget {
           onExpansionChanged: (val) {
             Navigator.pop(context);
 
-            if (_currentRoute != '/customer')
-              Navigator.pushNamed(context, '/customer');
+            if (_currentRoute != '/consumers')
+              Navigator.pushNamed(context, '/consumers');
           },
           children: [
             ListTile(
               contentPadding: EdgeInsets.only(left: 32),
               leading: Icon(Icons.visibility_sharp),
               title: Text(
-                'View Records',
+                'View Consumers',
                 style: TextStyle(
                   fontSize: _fontSize,
-                  color: _currentRoute == '/viewCustomers'
+                  color: _currentRoute == '/view-consumers'
                       ? Theme.of(context).primaryColor
                       : Colors.grey[600],
                 ),
               ),
               selectedTileColor: Theme.of(context).primaryColor.withOpacity(.5),
-              selected: _currentRoute == '/viewCustomers',
+              selected: _currentRoute == '/view-consumers',
               onTap: () {
                 Navigator.pop(context);
 
-                if (_currentRoute != '/viewCustomers')
-                  Navigator.pushNamed(context, '/viewCustomers');
+                if (_currentRoute != '/view-consumers')
+                  Navigator.pushNamed(context, '/view-consumers');
               },
             ),
             ListTile(
               contentPadding: EdgeInsets.only(left: 32),
               leading: Icon(Icons.add),
               title: Text(
-                'Add Records',
+                'Add Consumers',
                 style: TextStyle(
                   fontSize: _fontSize,
-                  color: _currentRoute == '/addCustomers'
+                  color: _currentRoute == '/add-consumers'
                       ? Theme.of(context).primaryColor
                       : Colors.grey[600],
                 ),
@@ -165,8 +165,8 @@ class NavDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.pop(context);
 
-                if (_currentRoute != '/addCustomers')
-                  Navigator.pushNamed(context, '/addCustomers');
+                if (_currentRoute != '/add-consumers')
+                  Navigator.pushNamed(context, '/add-consumers');
               },
             )
           ],
