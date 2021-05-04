@@ -54,7 +54,7 @@ class ViewCustomers extends StatelessWidget {
                   );
                 else {
                   List filteredList = snapshot.data
-                      .where((item) => (item['id'] != ''))
+                      .where((item) => (item['email'] != ''))
                       .toList();
                   return Expanded(
                     child: ListView(
@@ -65,7 +65,6 @@ class ViewCustomers extends StatelessWidget {
                             showBottomBorder: true,
                             // columnSpacing: 100,
                             columns: [
-                              DataColumn(label: Text('id')),
                               DataColumn(label: Text('firstName')),
                               DataColumn(label: Text('lastName')),
                               DataColumn(label: Text('email')),
@@ -75,7 +74,6 @@ class ViewCustomers extends StatelessWidget {
                                 .map<DataRow>(
                                   (record) => DataRow(
                                     cells: [
-                                      DataCell(Text(record['id'] ?? '___')),
                                       DataCell(
                                           Text(record['firstName'] ?? '___')),
                                       DataCell(
