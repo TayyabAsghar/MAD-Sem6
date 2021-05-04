@@ -54,15 +54,14 @@ class NavDrawer extends StatelessWidget {
             'Prime or Composite',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _currentRoute == '/home'
+              color: _currentRoute == '/'
                   ? Theme.of(context).primaryColor
                   : Colors.grey[600],
             ),
           ),
           selectedTileColor: Theme.of(context).primaryColor.withOpacity(0.3),
-          selected: _currentRoute == '/home',
-          onTap: () =>
-              Navigator.popUntil(context, ModalRoute.withName('/home')),
+          selected: _currentRoute == '/',
+          onTap: () => Navigator.popUntil(context, ModalRoute.withName('/')),
         ),
         ListTile(
           leading: Icon(Icons.collections),
