@@ -15,44 +15,35 @@ class NavDrawer extends StatelessWidget {
       padding: EdgeInsets.zero,
       children: [
         Container(
-          width: double.infinity,
-          padding: EdgeInsets.all(20),
-          color: Theme.of(context).primaryColor,
-          child: Center(
+          height: 190,
+          child: DrawerHeader(
+            margin: EdgeInsets.all(0.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  width: 100,
-                  height: 100,
-                  margin: EdgeInsets.only(
-                    top: 30,
-                    bottom: 20,
+                CircleAvatar(
+                  radius: 40,
+                  backgroundImage: NetworkImage(
+                    'https://source.unsplash.com/300x300/?fire,green,forest',
                   ),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      image: NetworkImage(
-                        'https://source.unsplash.com/300x300/?fire,green,forest',
-                      ),
-                      fit: BoxFit.fill,
-                    ),
-                  ),
+                ),
+                SizedBox(
+                  height: 15,
                 ),
                 Text(
                   'Muhammad Tayyab Asghar',
                   style: TextStyle(
-                    fontSize: 21,
                     color: Colors.white,
+                    fontSize: 21,
                   ),
                 ),
                 Text(
                   'muhammadtayybasghar@gmail.com',
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                )
+                  style: TextStyle(color: Colors.white),
+                ),
               ],
             ),
+            decoration: BoxDecoration(color: Theme.of(context).primaryColor),
           ),
         ),
         ListTile(
