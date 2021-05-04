@@ -41,9 +41,9 @@ class _TransactionToggleState extends State<TransactionToggle> {
         isSelected: _isSelected,
         borderRadius: BorderRadius.circular(10),
         selectedColor: Colors.white,
-        fillColor: Colors.blue,
-        borderColor: Colors.blue,
-        selectedBorderColor: Colors.blue,
+        fillColor: Theme.of(context).primaryColor,
+        borderColor: Theme.of(context).primaryColor,
+        selectedBorderColor: Theme.of(context).primaryColor,
         borderWidth: 3,
         constraints: BoxConstraints.expand(
           width: MediaQuery.of(context).size.width / (1.2 * _isSelected.length),

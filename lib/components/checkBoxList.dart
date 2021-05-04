@@ -24,7 +24,7 @@ class _CheckBoxListState extends State<CheckBoxList> {
         (element) {
           int index = children.indexOf(element);
           return CheckboxListTile(
-            activeColor: Colors.blue,
+            activeColor: Theme.of(context).primaryColor,
             title: Text(
               element,
               style: TextStyle(fontSize: 20),

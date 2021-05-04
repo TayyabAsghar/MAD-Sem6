@@ -135,7 +135,7 @@ class _TransactionState extends State<Transaction> {
                   ),
                   underline: Container(
                     height: 2,
-                    color: Colors.blue,
+                    color: Theme.of(context).primaryColor,
                   ),
                 ),
               ],

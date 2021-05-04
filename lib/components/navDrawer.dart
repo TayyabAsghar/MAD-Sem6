@@ -50,10 +50,12 @@ class NavDrawer extends StatelessWidget {
             'Prime or Composite',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _currentRoute == '/home' ? Colors.blue : Colors.grey[600],
+              color: _currentRoute == '/home'
+                  ? Theme.of(context).primaryColor
+                  : Colors.grey[600],
             ),
           ),
-          selectedTileColor: Colors.blue.withOpacity(0.3),
+          selectedTileColor: Theme.of(context).primaryColor.withOpacity(0.3),
           selected: _currentRoute == '/home',
           onTap: () {
             Navigator.pop(context);
@@ -67,11 +69,11 @@ class NavDrawer extends StatelessWidget {
             style: TextStyle(
               fontSize: _fontSize,
               color: _currentRoute == '/collection'
-                  ? Colors.blue
+                  ? Theme.of(context).primaryColor
                   : Colors.grey[600],
             ),
           ),
-          selectedTileColor: Colors.blue.withOpacity(0.3),
+          selectedTileColor: Theme.of(context).primaryColor.withOpacity(0.3),
           selected: _currentRoute == '/collection',
           onTap: () {
             Navigator.pop(context);
@@ -89,11 +91,11 @@ class NavDrawer extends StatelessWidget {
             style: TextStyle(
               fontSize: _fontSize,
               color: _currentRoute == '/transaction'
-                  ? Colors.blue
+                  ? Theme.of(context).primaryColor
                   : Colors.grey[600],
             ),
           ),
-          selectedTileColor: Colors.blue.withOpacity(0.3),
+          selectedTileColor: Theme.of(context).primaryColor.withOpacity(0.3),
           selected: _currentRoute == '/transaction',
           onTap: () {
             Navigator.pop(context);
@@ -108,8 +110,9 @@ class NavDrawer extends StatelessWidget {
             'Customer Records',
             style: TextStyle(
               fontSize: _fontSize,
-              color:
-                  _currentRoute == '/customer' ? Colors.blue : Colors.grey[600],
+              color: _currentRoute == '/customer'
+                  ? Theme.of(context).primaryColor
+                  : Colors.grey[600],
             ),
           ),
           initiallyExpanded: subTiles.contains(_currentRoute),
@@ -127,10 +130,12 @@ class NavDrawer extends StatelessWidget {
                 'View Records',
                 style: TextStyle(
                   fontSize: _fontSize,
-                  color: _currentRoute == '' ? Colors.blue : Colors.grey[600],
+                  color: _currentRoute == ''
+                      ? Theme.of(context).primaryColor
+                      : Colors.grey[600],
                 ),
               ),
-              selectedTileColor: Colors.black.withOpacity(.5),
+              selectedTileColor: Theme.of(context).primaryColor.withOpacity(.5),
               selected: _currentRoute == '',
               onTap: () {},
             ),
@@ -141,10 +146,12 @@ class NavDrawer extends StatelessWidget {
                 'Add Records',
                 style: TextStyle(
                   fontSize: _fontSize,
-                  color: _currentRoute == '' ? Colors.blue : Colors.grey[600],
+                  color: _currentRoute == ''
+                      ? Theme.of(context).primaryColor
+                      : Colors.grey[600],
                 ),
               ),
-              selectedTileColor: Colors.black.withOpacity(.5),
+              selectedTileColor: Theme.of(context).primaryColor.withOpacity(.5),
               selected: _currentRoute == '',
               onTap: () {},
             )
@@ -157,10 +164,12 @@ class NavDrawer extends StatelessWidget {
             'Trash',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _currentRoute == '' ? Colors.blue : Colors.grey[600],
+              color: _currentRoute == ''
+                  ? Theme.of(context).primaryColor
+                  : Colors.grey[600],
             ),
           ),
-          selectedTileColor: Colors.black.withOpacity(.5),
+          selectedTileColor: Theme.of(context).primaryColor.withOpacity(.5),
           selected: _currentRoute == '',
           onTap: () {},
         ),
@@ -175,10 +184,12 @@ class NavDrawer extends StatelessWidget {
             'Settings',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _currentRoute == '' ? Colors.blue : Colors.grey[600],
+              color: _currentRoute == ''
+                  ? Theme.of(context).primaryColor
+                  : Colors.grey[600],
             ),
           ),
-          selectedTileColor: Colors.black.withOpacity(.5),
+          selectedTileColor: Theme.of(context).primaryColor.withOpacity(.5),
           selected: _currentRoute == '',
           onTap: () {},
         ),
@@ -189,10 +200,12 @@ class NavDrawer extends StatelessWidget {
             'Help',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _currentRoute == '' ? Colors.blue : Colors.grey[600],
+              color: _currentRoute == ''
+                  ? Theme.of(context).primaryColor
+                  : Colors.grey[600],
             ),
           ),
-          selectedTileColor: Colors.black.withOpacity(.5),
+          selectedTileColor: Theme.of(context).primaryColor.withOpacity(.5),
           selected: _currentRoute == '',
           onTap: () {},
         ),
@@ -206,10 +219,12 @@ class NavDrawer extends StatelessWidget {
             'Logout',
             style: TextStyle(
               fontSize: _fontSize,
-              color: Colors.grey[600],
+              color: _currentRoute == ''
+                  ? Theme.of(context).primaryColor
+                  : Colors.grey[600],
             ),
           ),
-          selectedTileColor: Colors.black.withOpacity(.5),
+          selectedTileColor: Theme.of(context).primaryColor.withOpacity(.5),
           //selected: _currentRoute == '',
           onTap: () {
             showDialog(
