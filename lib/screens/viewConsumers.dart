@@ -26,9 +26,11 @@ class ViewConsumers extends StatelessWidget {
                 Navigator.popAndPushNamed(context, '/add-consumers'),
           ),
           IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () =>
-                Navigator.popUntil(context, ModalRoute.withName('/consumers')),
+            icon: Icon(Icons.people),
+            onPressed: () => Navigator.popUntil(
+              context,
+              ModalRoute.withName('/consumers'),
+            ),
           )
         ],
       ),
