@@ -5,6 +5,7 @@ import 'screens/collection.dart';
 import 'screens/transaction.dart';
 import 'screens/customer.dart';
 import 'screens/viewCustomers.dart';
+import 'screens/addCustomers.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
         '/collection': (context) => Collection(),
         '/transaction': (context) => Transaction(),
         '/customer': (context) => Customer(),
-        '/viewCustomer': (context) => ViewCustomers(),
+        '/viewCustomers': (context) => ViewCustomers(),
+        '/addCustomers': (context) => AddCustomer(),
       },
     );
   }

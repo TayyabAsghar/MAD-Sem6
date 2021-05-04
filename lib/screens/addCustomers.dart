@@ -11,27 +11,33 @@ class AddCustomer extends StatefulWidget {
 }
 
 class _AddCustomerState extends State<AddCustomer> {
-  final titleController = TextEditingController();
+  final fNameController = TextEditingController();
+  final lNameController = TextEditingController();
+  final emailController = TextEditingController();
+  final phoneController = TextEditingController();
+  String genderController = 'Male';
 
-  String levelController = 'BSc';
+  Future sendCustomersData() async {
+    if (fNameController.text.isNotEmpty &&
+        lNameController.text.isNotEmpty &&
+        emailController.text.isNotEmpty &&
+        phoneController.text.isNotEmpty) {
+      var response = await http.post(
+        createApiURI,
+        body: jsonEncode(
+          {
+            "firstName": fNameController.text,
+            "lastName": lNameController.text,
+            "gender": genderController,
+            "email": emailController.text,
+            "phone": phoneController.text
+          },
+        ),
+      );
 
-  final theoryHrsController = TextEditingController();
-
-  final labHrsController = TextEditingController();
-
-  Future sendSubjectsData() async {
-    if (titleController.text.length > 0 &&
-        theoryHrsController.text.length > 0 &&
-        labHrsController.text.length > 0) {
-      var response = await http.post(createApiURI,
-          body: jsonEncode({
-            "title": titleController.text,
-            "level": levelController,
-            "theoryHours": theoryHrsController.text,
-            "labHours": labHrsController.text
-          }));
       var result = jsonDecode(response.body);
       print(result);
+
       showDialog(
         context: context,
         builder: (context) {
@@ -39,9 +45,10 @@ class _AddCustomerState extends State<AddCustomer> {
             okTitle: 'Request Sent',
             content: result['message'],
             onPressedOk: () {
-              titleController.clear();
-              theoryHrsController.clear();
-              labHrsController.clear();
+              fNameController.clear();
+              lNameController.clear();
+              emailController.clear();
+              phoneController.clear();
               Navigator.pop(context);
             },
           );
@@ -65,113 +72,112 @@ class _AddCustomerState extends State<AddCustomer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Subject'),
-        actions: [
-          IconButton(
-              icon: Icon(Icons.visibility),
-              onPressed: () {
-                Navigator.popAndPushNamed(context, '/view-subjects');
-              }),
-          IconButton(
-              icon: Icon(Icons.home),
-              onPressed: () {
-                Navigator.popUntil(context, ModalRoute.withName('/'));
-              })
-        ],
+        title: Text('Add Customer'),
       ),
       drawer: Drawer(
         child: NavDrawer(),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(15),
-        child: Column(
-          children: [
-            Hero(
-              tag: 'logo',
-              child: Image(
-                image: AssetImage(
-                  'assets/logo.png',
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(15),
+          child: Column(
+            children: [
+              Hero(
+                tag: 'logo',
+                child: Image.asset(
+                  'assets/images/Customer.jpg',
+                  width: 150,
                 ),
-                width: 150,
               ),
-            ),
-            Flexible(
-              child: TextField(
-                style: TextStyle(fontSize: 20),
-                controller: titleController,
-                decoration: InputDecoration(labelText: 'Subject Title'),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Flexible(
+                    child: TextField(
+                      style: TextStyle(fontSize: 20),
+                      controller: fNameController,
+                      decoration: InputDecoration(labelText: 'First Name'),
+                    ),
+                  ),
+                  Flexible(
+                    child: TextField(
+                      style: TextStyle(fontSize: 20),
+                      controller: lNameController,
+                      decoration: InputDecoration(labelText: 'Last Name'),
+                    ),
+                  ),
+                ],
               ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Text(
-                  'Level:',
-                  style: TextStyle(fontSize: 20),
-                ),
-                SizedBox(
-                  width: 30,
-                ),
-                Flexible(
-                  child: DropdownButton(
-                    value: levelController,
-                    items: ['Materic', 'FSc', 'BSc', 'MS', 'PhD']
-                        .map(
-                          (e) => DropdownMenuItem(
-                            child: Text(e),
-                            value: e,
-                          ),
-                        )
-                        .toList(),
-                    isExpanded: true,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    'Level:',
                     style: TextStyle(fontSize: 20),
-                    onChanged: (String value) {
-                      setState(() {
-                        levelController = value;
-                      });
-                    },
-                    underline: Container(
-                      height: 2,
-                      color: Colors.teal,
+                  ),
+                  SizedBox(
+                    width: 30,
+                  ),
+                  Flexible(
+                    child: DropdownButton<String>(
+                      value: genderController,
+                      isExpanded: true,
+                      items: ['Male', 'Female']
+                          .map(
+                            (val) => DropdownMenuItem(
+                              child: Text(
+                                val,
+                                style: TextStyle(fontSize: 20),
+                              ),
+                              value: val,
+                            ),
+                          )
+                          .toList(),
+                      onChanged: (String value) =>
+                          setState(() => genderController = value),
+                      underline: Container(
+                        height: 2,
+                        color: Colors.teal,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Flexible(
+                child: TextField(
+                  style: TextStyle(fontSize: 20),
+                  controller: emailController,
+                  decoration: InputDecoration(labelText: 'Email'),
+                ),
+              ),
+              Flexible(
+                child: TextField(
+                  style: TextStyle(fontSize: 20),
+                  controller: phoneController,
+                  decoration: InputDecoration(labelText: 'Phone'),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(15),
+                child: ElevatedButton(
+                  onPressed: sendCustomersData,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.add),
+                        Text(
+                          'Add Customer',
+                          style: TextStyle(fontSize: 20),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-              ],
-            ),
-            Flexible(
-              child: TextField(
-                style: TextStyle(fontSize: 20),
-                controller: theoryHrsController,
-                decoration: InputDecoration(labelText: 'Theory Hours'),
-              ),
-            ),
-            Flexible(
-              child: TextField(
-                style: TextStyle(fontSize: 20),
-                controller: labHrsController,
-                decoration: InputDecoration(labelText: 'Lab Hours'),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(15),
-              child: ElevatedButton(
-                onPressed: sendSubjectsData,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(Icons.add),
-                      Text(
-                        'Add Subject',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );
