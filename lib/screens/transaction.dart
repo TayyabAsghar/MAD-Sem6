@@ -70,6 +70,8 @@ class _TransactionState extends State<Transaction> {
                   return CustomAlertDialog(
                     title: 'Confirmation',
                     content: 'Are you sure you want to Cancel?',
+                    onPressedYes: () => Navigator.pop(context),
+                    onPressedNo: () => Navigator.pop(context),
                   );
                 },
               );
@@ -87,6 +89,8 @@ class _TransactionState extends State<Transaction> {
                   return CustomAlertDialog(
                     title: 'Confirmation',
                     content: 'Are you sure you want to Apply Changes?',
+                    onPressedYes: () => Navigator.pop(context),
+                    onPressedNo: () => Navigator.pop(context),
                   );
                 },
               );

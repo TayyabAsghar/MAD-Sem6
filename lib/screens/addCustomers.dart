@@ -35,15 +35,15 @@ class _AddCustomerState extends State<AddCustomer> {
       showDialog(
         context: context,
         builder: (context) {
-          return CustomAlertDialog(
-            title: 'Request Sent',
+          return CustomAlertDialog.ok(
+            okTitle: 'Request Sent',
             content: result['message'],
-            // onPressed: () {
-            //   titleController.clear();
-            //   theoryHrsController.clear();
-            //   labHrsController.clear();
-            //   Navigator.pop(context);
-            // },
+            onPressedOk: () {
+              titleController.clear();
+              theoryHrsController.clear();
+              labHrsController.clear();
+              Navigator.pop(context);
+            },
           );
         },
       );
@@ -51,10 +51,10 @@ class _AddCustomerState extends State<AddCustomer> {
       showDialog(
         context: context,
         builder: (context) {
-          return CustomAlertDialog(
-            title: 'Failed',
+          return CustomAlertDialog.ok(
+            okTitle: 'Failed',
             content: 'Kindly Fill all required fields.',
-            // onPressed: () => Navigator.pop(context),
+            onPressedOk: () => Navigator.pop(context),
           );
         },
       );

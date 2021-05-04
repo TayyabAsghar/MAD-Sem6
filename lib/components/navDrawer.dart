@@ -239,8 +239,11 @@ class NavDrawer extends StatelessWidget {
               context: context,
               builder: (context) {
                 return CustomAlertDialog(
-                    title: 'Confirmation',
-                    content: 'Are you sure, you wants to logout?');
+                  title: 'Confirmation',
+                  content: 'Are you sure, you wants to logout?',
+                  onPressedYes: () => Navigator.pop(context),
+                  onPressedNo: () => Navigator.pop(context),
+                );
               },
             );
           },
