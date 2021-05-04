@@ -70,6 +70,7 @@ class ViewConsumers extends StatelessWidget {
                             columns: [
                               DataColumn(label: Text('First Name')),
                               DataColumn(label: Text('Last Name')),
+                              DataColumn(label: Text('Gender')),
                               DataColumn(label: Text('Email')),
                               DataColumn(label: Text('Phone')),
                             ],
@@ -81,6 +82,7 @@ class ViewConsumers extends StatelessWidget {
                                           Text(record['firstName'] ?? '___')),
                                       DataCell(
                                           Text(record['lastName'] ?? '___')),
+                                      DataCell(Text(record['gender'] ?? '___')),
                                       DataCell(Text(record['email'] ?? '___')),
                                       DataCell(Text(record['phone'] ?? '___')),
                                     ],
