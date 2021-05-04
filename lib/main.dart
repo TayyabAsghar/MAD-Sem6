@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'theme/ui.dart';
 import 'screens/home.dart';
 import 'screens/collection.dart';
 import 'screens/transaction.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'MAD - T',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: primaryColor,
       ),
       initialRoute: '/home',
       routes: {
