@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'customAlertDialog.dart';
 
@@ -7,6 +9,7 @@ class NavDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _currentRoute = ModalRoute.of(context).settings.name;
+    final subTiles = ['/record'];
 
     return ListView(
       padding: EdgeInsets.zero,
@@ -116,15 +119,20 @@ class NavDrawer extends StatelessWidget {
             'Records',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _currentRoute == '' ? Colors.blue : Colors.grey[600],
+              color:
+                  _currentRoute == '/record' ? Colors.blue : Colors.grey[600],
             ),
           ),
+          initiallyExpanded: subTiles.contains(_currentRoute),
+          onExpansionChanged: (val) {
+            Navigator.pop(context);
+
+            if (_currentRoute != '/record')
+              Navigator.pushNamed(context, '/record');
+          },
           children: [
             ListTile(
-              contentPadding: EdgeInsets.only(
-                left: 32,
-                right: 32,
-              ),
+              contentPadding: EdgeInsets.only(left: 32),
               leading: Icon(Icons.visibility_sharp),
               title: Text(
                 'View Records',
@@ -138,9 +146,7 @@ class NavDrawer extends StatelessWidget {
               onTap: () {},
             ),
             ListTile(
-              contentPadding: EdgeInsets.only(
-                left: 32,
-              ),
+              contentPadding: EdgeInsets.only(left: 32),
               leading: Icon(Icons.add),
               title: Text(
                 'Add Records',
