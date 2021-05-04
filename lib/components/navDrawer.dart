@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'customAlertDialog.dart';
 
@@ -55,7 +53,7 @@ class NavDrawer extends StatelessWidget {
               color: _currentRoute == '/home' ? Colors.blue : Colors.grey[600],
             ),
           ),
-          selectedTileColor: Colors.blue.withOpacity(.3),
+          selectedTileColor: Colors.blue.withOpacity(0.3),
           selected: _currentRoute == '/home',
           onTap: () {
             Navigator.pop(context);
@@ -73,7 +71,7 @@ class NavDrawer extends StatelessWidget {
                   : Colors.grey[600],
             ),
           ),
-          selectedTileColor: Colors.blue.withOpacity(.3),
+          selectedTileColor: Colors.blue.withOpacity(0.3),
           selected: _currentRoute == '/collection',
           onTap: () {
             Navigator.pop(context);
@@ -95,7 +93,7 @@ class NavDrawer extends StatelessWidget {
                   : Colors.grey[600],
             ),
           ),
-          selectedTileColor: Colors.blue.withOpacity(.3),
+          selectedTileColor: Colors.blue.withOpacity(0.3),
           selected: _currentRoute == '/transaction',
           onTap: () {
             Navigator.pop(context);
