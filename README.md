@@ -11,11 +11,11 @@
 
 MAD-Sem6 is a Mobile Development Course Project that contains `Basic` ➡️ `Medium` implementation of different widgets. As a whole it doesn't make any sense as it is made according to given assignments to learn different widgets. Each screen is different from other.
 
-# 📱 Screens
+# 📱 Screens Widgets Used
 
 These are some screens and features that has been implemented.
 
-## 1️⃣ Screen Widgets Used
+## 1️⃣ Screen
 
 |              |
 | ------------ |
