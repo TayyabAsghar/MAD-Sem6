@@ -116,6 +116,7 @@ class _AddConsumersState extends State<AddConsumers> {
                       child: TextField(
                         style: TextStyle(fontSize: 20),
                         controller: fNameController,
+                        textCapitalization: TextCapitalization.words,
                         decoration: InputDecoration(labelText: 'First Name'),
                       ),
                     ),
@@ -126,6 +127,7 @@ class _AddConsumersState extends State<AddConsumers> {
                       child: TextField(
                         style: TextStyle(fontSize: 20),
                         controller: lNameController,
+                        textCapitalization: TextCapitalization.words,
                         decoration: InputDecoration(labelText: 'Last Name'),
                       ),
                     ),
