@@ -23,9 +23,14 @@ These are some screens and features that has been implemented.
 
 ## 2️⃣ Screen
 
+<!-- Do not merge the tables as it will make the 4th cell empty on Github. -->
+
 |                |                |
 | -------------- | -------------- |
 | ![][screen2.1] | ![][screen2.2] |
+
+|                |
+| -------------- |
 | ![][screen2.3] |
 
 ## 3️⃣ Screen
@@ -33,6 +38,9 @@ These are some screens and features that has been implemented.
 |                |                |
 | -------------- | -------------- |
 | ![][screen3.1] | ![][screen3.2] |
+
+|                |
+| -------------- |
 | ![][screen3.3] |
 
 ## 4️⃣ Screen
