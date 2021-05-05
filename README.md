@@ -17,24 +17,22 @@ These are some screens and features that has been implemented.
 
 ## 1️⃣ Screen
 
-|              |
-| ------------ |
-| ![][screen1] |
+|                |                |
+| -------------- | -------------- |
+| ![][screen1.1] | ![][screen1.2] |
 
 ## 2️⃣ Screen
 
-|              |
-| ------------ |
-| ![][screen2] |
+|                |                |
+| -------------- | -------------- |
+| ![][screen2.1] | ![][screen2.2] |
+| ![][screen2.3] |
 
 ## 3️⃣ Screen
 
 |                |                |
 | -------------- | -------------- |
 | ![][screen3.1] | ![][screen3.2] |
-
-|                |
-| -------------- |
 | ![][screen3.3] |
 
 ## 4️⃣ Screen
@@ -85,9 +83,11 @@ Start developing!
 
 <!-- Screens -->
 
-[screen1]: assets/screenShots/Screen1.jpg
-[screen2]: assets/screenShots/Screen2.jpg
-[screen3]: assets/screenShots/Screen3.jpg
+[screen1.1]: assets/screenShots/Screen1.1.jpg
+[screen1.2]: assets/screenShots/Screen1.2.jpg
+[screen2.1]: assets/screenShots/Screen2.1.jpg
+[screen2.2]: assets/screenShots/Screen2.2.jpg
+[screen2.3]: assets/screenShots/Screen2.3.jpg
 [screen3.1]: assets/screenShots/Screen3.1.jpg
 [screen3.2]: assets/screenShots/Screen3.2.jpg
 [screen3.3]: assets/screenShots/Screen3.3.jpg
