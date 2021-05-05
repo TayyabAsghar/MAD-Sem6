@@ -6,7 +6,17 @@ class Consumers extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Consumers Records'),
+        title: Text('Consumers'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.visibility_sharp),
+            onPressed: () => Navigator.pushNamed(context, '/view-consumers'),
+          ),
+          IconButton(
+            icon: Icon(Icons.add),
+            onPressed: () => Navigator.pushNamed(context, '/add-consumers'),
+          )
+        ],
       ),
       drawer: Drawer(
         child: NavDrawer(),
