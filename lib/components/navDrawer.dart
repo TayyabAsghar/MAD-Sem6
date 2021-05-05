@@ -120,8 +120,7 @@ class NavDrawer extends StatelessWidget {
           onExpansionChanged: (val) {
             Navigator.pop(context);
 
-            if (_currentRoute != '/consumers')
-              Navigator.pushNamed(context, '/consumers');
+            if (val) Navigator.pushNamed(context, '/consumers');
           },
           children: [
             ListTile(
@@ -160,7 +159,7 @@ class NavDrawer extends StatelessWidget {
               ),
               selectedTileColor:
                   Theme.of(context).primaryColor.withOpacity(0.3),
-              selected: _currentRoute == '',
+              selected: _currentRoute == '/add-consumers',
               onTap: () {
                 Navigator.pop(context);
 
