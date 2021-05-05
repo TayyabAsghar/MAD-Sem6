@@ -1,5 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mobile_app_dev_sem_6">
+        <!-- Required to fetch data from the internet. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    
    <application
         android:label="MAD - T"
         android:icon="@mipmap/ic_launcher">
