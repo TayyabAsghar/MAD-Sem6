@@ -12,6 +12,48 @@ class ViewConsumers extends StatelessWidget {
       final result = jsonDecode(response.body);
       return result;
     }
+
+    // If about test URL failed you an uncomment it to see what the result will look like.
+
+    //     final result = {
+    //   {
+    //     'firstName': 'Uchiha',
+    //     'lastName': 'Itachi',
+    //     'gender': 'Male',
+    //     'email': 'itachi@blackanbu.com',
+    //     'phone': '00000000000',
+    //   },
+    //   {
+    //     'firstName': 'Talia',
+    //     'lastName': 'al Ghul',
+    //     'gender': 'Female',
+    //     'email': 'talia@assassin.com',
+    //     'phone': '00000000000',
+    //   },
+    //   {
+    //     'firstName': 'Levi',
+    //     'lastName': 'Ackerman',
+    //     'gender': 'Male',
+    //     'email': 'justlevi@ackerman.com',
+    //     'phone': '00000000000',
+    //   },
+    //   {
+    //     'firstName': 'Tanjiro',
+    //     'lastName': 'Kamado',
+    //     'gender': 'Male',
+    //     'email': 'tanjiro@demonslayer.com',
+    //     'phone': '00000000000',
+    //   },
+    //   {
+    //     'firstName': 'Yuji',
+    //     'lastName': 'Itadori',
+    //     'gender': 'Male',
+    //     'email': 'yuji@jujutsukaisen.com',
+    //     'phone': '00000000000',
+    //   }
+    // };
+
+    // return result;
   }
 
   @override
