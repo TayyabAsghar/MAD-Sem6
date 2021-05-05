@@ -66,10 +66,9 @@ class ViewConsumers extends StatelessWidget {
                           scrollDirection: Axis.horizontal,
                           child: DataTable(
                             showBottomBorder: true,
-                            // columnSpacing: 100,
+                            // columnSpacing: 40,
                             columns: [
-                              DataColumn(label: Text('First Name')),
-                              DataColumn(label: Text('Last Name')),
+                              DataColumn(label: Text('Name')),
                               DataColumn(label: Text('Gender')),
                               DataColumn(label: Text('Email')),
                               DataColumn(label: Text('Phone')),
@@ -78,10 +77,9 @@ class ViewConsumers extends StatelessWidget {
                                 .map<DataRow>(
                                   (record) => DataRow(
                                     cells: [
-                                      DataCell(
-                                          Text(record['firstName'] ?? '___')),
-                                      DataCell(
-                                          Text(record['lastName'] ?? '___')),
+                                      DataCell(Text(record['firstName'] +
+                                          ' ' +
+                                          record['lastName'])),
                                       DataCell(Text(record['gender'] ?? '___')),
                                       DataCell(Text(record['email'] ?? '___')),
                                       DataCell(Text(record['phone'] ?? '___')),
