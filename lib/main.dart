@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'theme/ui.dart';
 import 'screens/home.dart';
+import 'screens/picture.dart';
+import 'screens/consumers.dart';
 import 'screens/collection.dart';
 import 'screens/transaction.dart';
-import 'screens/consumers.dart';
-import 'screens/viewConsumers.dart';
 import 'screens/addConsumers.dart';
+import 'screens/viewConsumers.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         '/consumers': (context) => Consumers(),
         '/view-consumers': (context) => ViewConsumers(),
         '/add-consumers': (context) => AddConsumers(),
+        '/picture': (context) => Picture(),
       },
     );
   }

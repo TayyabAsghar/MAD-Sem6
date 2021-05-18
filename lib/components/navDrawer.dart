@@ -170,20 +170,24 @@ class NavDrawer extends StatelessWidget {
           ],
         ),
         ListTile(
-          enabled: false,
-          leading: Icon(Icons.delete),
+          leading: Icon(Icons.camera_alt),
           title: Text(
-            'Trash',
+            'Upload Image',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _currentRoute == ''
+              color: _currentRoute == '/picture'
                   ? Theme.of(context).primaryColor
                   : Colors.grey[600],
             ),
           ),
           selectedTileColor: Theme.of(context).primaryColor.withOpacity(0.3),
-          selected: _currentRoute == '',
-          onTap: () {},
+          selected: _currentRoute == '/picture',
+          onTap: () {
+            Navigator.pop(context);
+
+            if (_currentRoute != '/picture')
+              Navigator.pushNamed(context, '/picture');
+          },
         ),
         Divider(
           height: 1,
