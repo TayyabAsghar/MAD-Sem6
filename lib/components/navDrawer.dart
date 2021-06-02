@@ -194,20 +194,24 @@ class NavDrawer extends StatelessWidget {
           thickness: 1,
         ),
         ListTile(
-          enabled: false,
-          leading: Icon(Icons.settings),
+          leading: Icon(Icons.list_alt_outlined),
           title: Text(
-            'Settings',
+            'Form Validations',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _currentRoute == ''
+              color: _currentRoute == '/form-validations'
                   ? Theme.of(context).primaryColor
                   : Colors.grey[600],
             ),
           ),
           selectedTileColor: Theme.of(context).primaryColor.withOpacity(0.3),
-          selected: _currentRoute == '',
-          onTap: () {},
+          selected: _currentRoute == '/form-validations',
+          onTap: () {
+            Navigator.pop(context);
+
+            if (_currentRoute != '/form-validations')
+              Navigator.pushNamed(context, '/form-validations');
+          },
         ),
         ListTile(
           enabled: false,

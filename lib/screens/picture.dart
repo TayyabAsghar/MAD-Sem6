@@ -94,7 +94,6 @@ class _PictureState extends State<Picture> {
     else {
       var result = jsonDecode(response.body);
 
-      print(result);
       showDialog(
         context: context,
         builder: (context) {

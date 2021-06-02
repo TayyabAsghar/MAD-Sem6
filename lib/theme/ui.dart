@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-final primaryColor = MaterialColor(
+const primaryColor = MaterialColor(
   0xFF465A65,
   <int, Color>{
     50: Color(0xFF465A65),
@@ -15,3 +15,10 @@ final primaryColor = MaterialColor(
     900: Color(0xFF465A65),
   },
 );
+
+// Form Styling
+
+const kTextFieldStyle = TextStyle(fontSize: 20);
+const klabelStyle = TextStyle(fontSize: 20);
+const kErrorStyle = TextStyle(fontSize: 13);
+const kErrorMessageStyle = TextStyle(color: Colors.red);

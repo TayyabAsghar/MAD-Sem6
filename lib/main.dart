@@ -7,6 +7,7 @@ import 'screens/collection.dart';
 import 'screens/transaction.dart';
 import 'screens/addConsumers.dart';
 import 'screens/viewConsumers.dart';
+import 'screens/formValidations.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         '/view-consumers': (context) => ViewConsumers(),
         '/add-consumers': (context) => AddConsumers(),
         '/picture': (context) => Picture(),
+        '/form-validations': (context) => FormValidations(),
       },
     );
   }
