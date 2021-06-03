@@ -39,6 +39,16 @@ class NavDrawer extends StatelessWidget {
                     height: 80,
                     placeholder:
                         AssetImage('assets/images/drawer_placeholder.jpg'),
+                    imageErrorBuilder: (
+                      BuildContext context,
+                      Object exception,
+                      StackTrace stackTrace,
+                    ) =>
+                        CircleAvatar(
+                      radius: 40,
+                      backgroundImage:
+                          AssetImage('assets/images/drawer_placeholder.jpg'),
+                    ),
                   ),
                 ),
                 SizedBox(
