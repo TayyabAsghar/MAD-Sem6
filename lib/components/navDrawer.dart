@@ -11,7 +11,7 @@ class NavDrawer extends StatelessWidget {
   static const tabSubTiles = [
     '/tab-bars',
     '/tab-with-5bars',
-    '/add-consumers',
+    '/tab-with-6bars',
   ];
 
   @override
@@ -256,24 +256,24 @@ class NavDrawer extends StatelessWidget {
             ),
             ListTile(
               contentPadding: EdgeInsets.only(left: 32),
-              leading: Icon(Icons.filter_8),
+              leading: Icon(Icons.filter_6),
               title: Text(
-                '8 Tab Bars',
+                '6 Tab Bars',
                 style: TextStyle(
                   fontSize: _fontSize,
-                  color: _currentRoute == '/add-consumers'
+                  color: _currentRoute == '/tab-with-6bars'
                       ? Theme.of(context).primaryColor
                       : Colors.grey[600],
                 ),
               ),
               selectedTileColor:
                   Theme.of(context).primaryColor.withOpacity(0.3),
-              selected: _currentRoute == '/add-consumers',
+              selected: _currentRoute == '/tab-with-6bars',
               onTap: () {
                 Navigator.pop(context);
 
-                if (_currentRoute != '/add-consumers')
-                  Navigator.pushNamed(context, '/add-consumers');
+                if (_currentRoute != '/tab-with-6bars')
+                  Navigator.pushNamed(context, '/tab-with-6bars');
               },
             )
           ],

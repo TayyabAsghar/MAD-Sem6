@@ -1,6 +1,5 @@
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import '../components/navDrawer.dart';
 import '../components/checkBoxList.dart';
 import '../components/transactionToggle.dart';
@@ -44,12 +43,14 @@ class _TransactionState extends State<Transaction> {
     void datePicker(TextEditingController controller) {
       showDatePicker(
         context: context,
-        initialDate: DateTime.now(),
+        initialDate: fromController.text == '-'
+            ? DateTime.now()
+            : DateFormat('yyyy-MM-dd').parse(fromController.text),
         firstDate: DateTime(1960, 1),
         lastDate: DateTime(2050, 12),
       ).then(
         (pickedDate) =>
-            controller.text = DateFormat('dd-MM-yyyy').format(pickedDate),
+            controller.text = DateFormat('yyyy-MM-dd').format(pickedDate),
       );
     }
 
@@ -276,7 +277,7 @@ class _TransactionState extends State<Transaction> {
                           decoration: InputDecoration(
                             labelText: 'From',
                           ),
-                          keyboardType: TextInputType.datetime,
+                          readOnly: true,
                           onTap: () => datePicker(fromController),
                         ),
                       ),
@@ -292,7 +293,7 @@ class _TransactionState extends State<Transaction> {
                           decoration: InputDecoration(
                             labelText: 'To',
                           ),
-                          keyboardType: TextInputType.datetime,
+                          readOnly: true,
                           onTap: () => datePicker(toController),
                         ),
                       ),

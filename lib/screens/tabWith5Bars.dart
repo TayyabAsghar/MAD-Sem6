@@ -75,7 +75,7 @@ class _TabWith5BarsState extends State<TabWith5Bars>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tab Bars'),
+        title: Text('Buttons & Icons'),
         bottom: TabBar(
           unselectedLabelColor: Colors.black,
           indicatorSize: TabBarIndicatorSize.label,
@@ -107,14 +107,12 @@ class _TabWith5BarsState extends State<TabWith5Bars>
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: DropdownButton(
                     value: dropdownController,
-                    onChanged: (value) => setState(
-                      () {
-                        dropdownController = value;
-                        _tabController.animateTo(
-                          items.indexOf(value),
-                        );
-                      },
-                    ),
+                    onChanged: (value) {
+                      setState(() => dropdownController = value);
+                      _tabController.animateTo(
+                        items.indexOf(value),
+                      );
+                    },
                     style: kDropdownItemsStyle,
                     isExpanded: true,
                     items: items

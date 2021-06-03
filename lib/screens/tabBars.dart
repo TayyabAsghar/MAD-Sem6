@@ -52,7 +52,7 @@ class _TabBarState extends State<TabBars> {
               ),
               onEnd: () {
                 if (rotateFirst) {
-                  Navigator.pushNamed(context, '/tab-with-5bars');
+                  Navigator.pushNamed(context, '/tab-with-6bars');
                   setState(() => rotateFirst = false);
                 }
               },
@@ -70,11 +70,11 @@ class _TabBarState extends State<TabBars> {
                   child: Column(
                     children: [
                       Text(
-                        'Screen With 8 TabBars',
+                        'Screen With 6 TabBars',
                         style: TextStyle(fontSize: 20),
                       ),
                       SizedBox(height: 10),
-                      Icon(Icons.filter_8),
+                      Icon(Icons.filter_6),
                     ],
                   ),
                 ),

@@ -30,7 +30,7 @@ class _CheckBoxListState extends State<CheckBoxList> {
               style: TextStyle(fontSize: 20),
             ),
             value: values[index],
-            onChanged: (bool value) => setState(
+            onChanged: (value) => setState(
               () => values[index] = value,
             ),
           );

@@ -8,6 +8,7 @@ import 'screens/collection.dart';
 import 'screens/transaction.dart';
 import 'screens/addConsumers.dart';
 import 'screens/tabWith5Bars.dart';
+import 'screens/tabWith6Bars.dart';
 import 'screens/viewConsumers.dart';
 import 'screens/formValidations.dart';
 
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         '/form-validations': (context) => FormValidations(),
         '/tab-bars': (context) => TabBars(),
         '/tab-with-5bars': (context) => TabWith5Bars(),
+        '/tab-with-6bars': (context) => TabWith6Bars(),
       },
     );
   }
