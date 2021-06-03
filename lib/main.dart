@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'theme/ui.dart';
 import 'screens/home.dart';
+import 'screens/tabBars.dart';
 import 'screens/picture.dart';
 import 'screens/consumers.dart';
 import 'screens/collection.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         '/add-consumers': (context) => AddConsumers(),
         '/picture': (context) => Picture(),
         '/form-validations': (context) => FormValidations(),
+        '/tab-bar': (context) => TabBars(),
       },
     );
   }

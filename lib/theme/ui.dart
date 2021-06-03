@@ -22,3 +22,13 @@ const kTextFieldStyle = TextStyle(fontSize: 20);
 const klabelStyle = TextStyle(fontSize: 20);
 const kErrorStyle = TextStyle(fontSize: 13);
 const kErrorMessageStyle = TextStyle(color: Colors.red);
+
+// Tab Bar Styling
+
+final Icon kDrawerHeaderIcon = Icon(
+  Icons.visibility,
+  color: Colors.cyan[700],
+  size: 30,
+);
+const kDropdownItemsStyle = TextStyle(fontSize: 22, color: primaryColor);
+const kCheckboxListTileStyle = TextStyle(fontSize: 20);

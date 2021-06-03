@@ -214,20 +214,24 @@ class NavDrawer extends StatelessWidget {
           },
         ),
         ListTile(
-          enabled: false,
-          leading: Icon(Icons.help_center),
+          leading: Icon(Icons.horizontal_split),
           title: Text(
-            'Help',
+            'Tab Bars',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _currentRoute == ''
+              color: _currentRoute == '/tab-bar'
                   ? Theme.of(context).primaryColor
                   : Colors.grey[600],
             ),
           ),
           selectedTileColor: Theme.of(context).primaryColor.withOpacity(0.3),
-          selected: _currentRoute == '',
-          onTap: () {},
+          selected: _currentRoute == '/tab-bar',
+          onTap: () {
+            Navigator.pop(context);
+
+            if (_currentRoute != '/tab-bar')
+              Navigator.pushNamed(context, '/tab-bar');
+          },
         ),
         Divider(
           height: 1,
