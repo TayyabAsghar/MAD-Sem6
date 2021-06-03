@@ -28,10 +28,17 @@ class NavDrawer extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                CircleAvatar(
-                  radius: 40,
-                  backgroundImage: NetworkImage(
-                    'https://source.unsplash.com/300x300/?fire,green,forest',
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(40.0),
+                  child: FadeInImage(
+                    image: NetworkImage(
+                      'https://source.unsplash.com/300x300/?fire,green,forest',
+                    ),
+                    fit: BoxFit.cover,
+                    width: 80,
+                    height: 80,
+                    placeholder:
+                        AssetImage('assets/images/drawer_placeholder.jpg'),
                   ),
                 ),
                 SizedBox(
