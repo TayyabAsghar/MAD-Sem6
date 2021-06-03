@@ -3,15 +3,20 @@ import 'customAlertDialog.dart';
 
 class NavDrawer extends StatelessWidget {
   final _fontSize = 16.0;
+  static const consumerSubTiles = [
+    '/consumers',
+    '/view-consumers',
+    '/add-consumers',
+  ];
+  static const tabSubTiles = [
+    '/tab-bars',
+    '/tab-with-5bars',
+    '/add-consumers',
+  ];
 
   @override
   Widget build(BuildContext context) {
     final _currentRoute = ModalRoute.of(context).settings.name;
-    final subTiles = [
-      '/consumers',
-      '/view-consumers',
-      '/add-consumers',
-    ];
 
     return ListView(
       padding: EdgeInsets.zero,
@@ -116,7 +121,7 @@ class NavDrawer extends StatelessWidget {
                   : Colors.grey[600],
             ),
           ),
-          initiallyExpanded: subTiles.contains(_currentRoute),
+          initiallyExpanded: consumerSubTiles.contains(_currentRoute),
           onExpansionChanged: (val) {
             Navigator.pop(context);
 
@@ -189,10 +194,6 @@ class NavDrawer extends StatelessWidget {
               Navigator.pushNamed(context, '/picture');
           },
         ),
-        Divider(
-          height: 1,
-          thickness: 1,
-        ),
         ListTile(
           leading: Icon(Icons.list_alt_outlined),
           title: Text(
@@ -213,25 +214,69 @@ class NavDrawer extends StatelessWidget {
               Navigator.pushNamed(context, '/form-validations');
           },
         ),
-        ListTile(
+        ExpansionTile(
           leading: Icon(Icons.horizontal_split),
           title: Text(
             'Tab Bars',
             style: TextStyle(
               fontSize: _fontSize,
-              color: _currentRoute == '/tab-bar'
+              color: _currentRoute == '/tab-bars'
                   ? Theme.of(context).primaryColor
                   : Colors.grey[600],
             ),
           ),
-          selectedTileColor: Theme.of(context).primaryColor.withOpacity(0.3),
-          selected: _currentRoute == '/tab-bar',
-          onTap: () {
+          initiallyExpanded: tabSubTiles.contains(_currentRoute),
+          onExpansionChanged: (val) {
             Navigator.pop(context);
 
-            if (_currentRoute != '/tab-bar')
-              Navigator.pushNamed(context, '/tab-bar');
+            if (val) Navigator.pushNamed(context, '/tab-bars');
           },
+          children: [
+            ListTile(
+              contentPadding: EdgeInsets.only(left: 32),
+              leading: Icon(Icons.filter_5),
+              title: Text(
+                '5 Tab Bars',
+                style: TextStyle(
+                  fontSize: _fontSize,
+                  color: _currentRoute == '/tab-with-5bars'
+                      ? Theme.of(context).primaryColor
+                      : Colors.grey[600],
+                ),
+              ),
+              selectedTileColor:
+                  Theme.of(context).primaryColor.withOpacity(0.3),
+              selected: _currentRoute == '/tab-with-5bars',
+              onTap: () {
+                Navigator.pop(context);
+
+                if (_currentRoute != '/tab-with-5bars')
+                  Navigator.pushNamed(context, '/tab-with-5bars');
+              },
+            ),
+            ListTile(
+              contentPadding: EdgeInsets.only(left: 32),
+              leading: Icon(Icons.filter_8),
+              title: Text(
+                '8 Tab Bars',
+                style: TextStyle(
+                  fontSize: _fontSize,
+                  color: _currentRoute == '/add-consumers'
+                      ? Theme.of(context).primaryColor
+                      : Colors.grey[600],
+                ),
+              ),
+              selectedTileColor:
+                  Theme.of(context).primaryColor.withOpacity(0.3),
+              selected: _currentRoute == '/add-consumers',
+              onTap: () {
+                Navigator.pop(context);
+
+                if (_currentRoute != '/add-consumers')
+                  Navigator.pushNamed(context, '/add-consumers');
+              },
+            )
+          ],
         ),
         Divider(
           height: 1,
