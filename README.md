@@ -76,6 +76,19 @@ These are some screens and features that has been implemented.
 | ![][screen8.3] | ![][screen8.4] |
 | ![][screen8.5] | ![][screen8.6] |
 
+## 9️⃣ Screen
+
+|                |                |
+| -------------- | -------------- |
+| ![][screen9.1] | ![][screen9.2] |
+| ![][screen9.3] | ![][screen9.4] |
+
+## 🔟 Screen
+
+|                 |                 |
+| --------------- | --------------- |
+| ![][screen10.1] | ![][screen10.2] |
+
 # 👽 External API
 
 <a href="https://source.unsplash.com">
@@ -138,3 +151,9 @@ Start developing!
 [screen8.4]: assets/screenShots/Screen8.4.png
 [screen8.5]: assets/screenShots/Screen8.5.png
 [screen8.6]: assets/screenShots/Screen8.6.png
+[screen9.1]: assets/screenShots/Screen9.1.png
+[screen9.2]: assets/screenShots/Screen9.2.png
+[screen9.3]: assets/screenShots/Screen9.3.png
+[screen9.4]: assets/screenShots/Screen9.4.png
+[screen10.1]: assets/screenShots/Screen10.1.gif
+[screen10.2]: assets/screenShots/Screen10.2.gif
