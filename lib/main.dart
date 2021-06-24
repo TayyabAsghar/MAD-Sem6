@@ -11,7 +11,7 @@ import 'screens/tabWith5Bars.dart';
 import 'screens/tabWith6Bars.dart';
 import 'screens/viewConsumers.dart';
 import 'screens/formValidations.dart';
-import 'screens/SliderWithVideoPlayer.dart';
+import 'screens/sliderWithVideoPlayer.dart';
 
 void main() {
   runApp(MyApp());
