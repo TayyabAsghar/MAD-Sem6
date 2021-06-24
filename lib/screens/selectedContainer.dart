@@ -39,21 +39,24 @@ class _SelectedContainerState extends State<SelectedContainer> {
             ),
             items: [
               CarouselContainer(
-                color: Colors.red[900],
-                child: Center(
-                  child: Text(
-                    details['description'],
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 30,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
+                color: Theme.of(context).primaryColor,
+                child: Container(
+                  margin: EdgeInsets.all(6.0),
+                  child: Center(
+                    child: Text(
+                      details['description'],
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
               ),
               CarouselContainer(
-                color: Colors.red[900],
+                color: Colors.primaries.elementAt(14),
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
