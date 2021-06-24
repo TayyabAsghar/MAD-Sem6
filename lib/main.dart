@@ -11,6 +11,7 @@ import 'screens/tabWith5Bars.dart';
 import 'screens/tabWith6Bars.dart';
 import 'screens/viewConsumers.dart';
 import 'screens/formValidations.dart';
+import 'screens/SliderWithVideoPlayer.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
         '/tab-bars': (context) => TabBars(),
         '/tab-with-5bars': (context) => TabWith5Bars(),
         '/tab-with-6bars': (context) => TabWith6Bars(),
+        '/slider': (context) => SliderWithVideoPlayer(),
       },
     );
   }

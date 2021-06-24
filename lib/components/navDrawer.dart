@@ -295,6 +295,26 @@ class NavDrawer extends StatelessWidget {
             )
           ],
         ),
+        ListTile(
+          leading: Icon(Icons.burst_mode),
+          title: Text(
+            'Carousel Slider',
+            style: TextStyle(
+              fontSize: _fontSize,
+              color: _currentRoute == '/slider'
+                  ? Theme.of(context).primaryColor
+                  : Colors.grey[600],
+            ),
+          ),
+          selectedTileColor: Theme.of(context).primaryColor.withOpacity(0.3),
+          selected: _currentRoute == '/slider',
+          onTap: () {
+            Navigator.pop(context);
+
+            if (_currentRoute != '/slider')
+              Navigator.pushNamed(context, '/slider');
+          },
+        ),
         Divider(
           height: 1,
           thickness: 1,

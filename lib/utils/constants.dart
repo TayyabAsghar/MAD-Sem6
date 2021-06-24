@@ -1,4 +1,247 @@
-// Both the urls are temporary and may not work after sometime.
+// All the URLs are temporary and may not work after sometime.
 final fetchApiURI = Uri.parse('https://pcc.edu.pk/ws/list/ss_consumers.php');
 final createApiURI = Uri.parse('https://pcc.edu.pk/ws/create/ss_consumers.php');
 final uploadURI = Uri.parse('https://pcc.edu.pk/ws/file_upload.php');
+
+const SLIDER_DATA = [
+  {
+    'title': 'Prime or Composite',
+    'widgets': [
+      'Scaffold',
+      'AppBar',
+      'Drawer',
+      'Center',
+      'Column',
+      'Container',
+      'Padding',
+      'SizedBox',
+      'ElevatedButton',
+      'Text',
+      'Icon',
+      'AlertDialog',
+    ],
+    'description':
+        'A flutter Screen that tell whether the input number is Prime or Composite.',
+    'image_url': 'assets/screenShots/Screen1.1.jpg',
+    'video_url': 'assets/api-integration.mp4'
+  },
+  {
+    'title': 'Navigation Drawer',
+    'widgets': [
+      'ModalRoute',
+      'ListView',
+      'ListTile',
+      'ExpansionTile',
+      'Container',
+      'DrawerHeader',
+      'Column',
+      'ClipRRect',
+      'FadeInImage',
+      'NetworkImage',
+      'AssetImage',
+      'SizedBox',
+      'Text',
+      'BoxDecoration',
+      'Icon',
+      'Divider',
+      'AlertDialog',
+      'ElevatedButton',
+    ],
+    'description':
+        'A Drawer that connects all the screens and help on navigation between the screens.',
+    'image_url': 'assets/screenShots/Screen2.1.jpg',
+    'video_url': 'assets/api-integration.mp4'
+  },
+  {
+    'title': 'Image Collection',
+    'widgets': [
+      'Scaffold',
+      'AppBar',
+      'Text',
+      'Drawer',
+      'ListView',
+      'Icon',
+      'Container',
+      'Card',
+      'InkWell',
+      'Column',
+      'Stack',
+      'NetworkImage',
+      'Padding',
+      'ButtonBar',
+      'IconButton',
+      'TextButton',
+    ],
+    'description':
+        '''A flutter Screen that have Card Widgets with Images, Images description,
+         Icons (related to Images) and Favorite button.''',
+    'image_url': 'assets/screenShots/Screen3.1.jpg',
+    'video_url': 'assets/api-integration.mp4'
+  },
+  {
+    'title': 'Transaction',
+    'widgets': [
+      'Scaffold',
+      'AppBar',
+      'Text',
+      'Drawer',
+      'ListView',
+      'Icon',
+      'Container',
+      'Card',
+      'Flexible',
+      'Column',
+      'TextFormField',
+      'InputDecoration',
+      'Padding',
+      'TextButton',
+      'DropdownButton',
+      'DropdownMenuItem',
+      'CheckboxListTile',
+      'showDatePicker',
+      'AlertDialog',
+      'ElevatedButton',
+    ],
+    'description':
+        'A flutter Screen that have multiple widgets to show a Mock Transaction.',
+    'image_url': 'assets/screenShots/Screen4.1.jpg',
+    'video_url': 'assets/api-integration.mp4'
+  },
+  {
+    'title': 'Web-API Integration (for Jason Data)',
+    'widgets': [
+      'Scaffold',
+      'AppBar',
+      'Text',
+      'Drawer',
+      'ListView',
+      'Icon',
+      'Container',
+      'Center',
+      'Hero',
+      'Flexible',
+      'Column',
+      'TextFormField',
+      'InputDecoration',
+      'Padding',
+      'DropdownButton',
+      'DropdownMenuItem',
+      'AlertDialog',
+      'ElevatedButton',
+      'IconButton',
+      'SingleChildScrollView',
+      'DataTable',
+      'DataColumn',
+      'DataCell',
+    ],
+    'description':
+        '''A flutter Screen that have 2 sub screens with multiple widgets to Send
+        & Fetch data from an Integrated Web-API with meaningful messages on errors.''',
+    'image_url': 'assets/screenShots/Screen5.jpg',
+    'video_url': 'assets/api-integration.mp4'
+  },
+  {
+    'title': 'Web-API Integration (for Pictures)',
+    'widgets': [
+      'Scaffold',
+      'AppBar',
+      'Text',
+      'Drawer',
+      'CircularProgressIndicator',
+      'Icon',
+      'Container',
+      'Center',
+      'GestureDetector',
+      'ListBody',
+      'Column',
+      'ListTile',
+      'Divider',
+      'Padding',
+      'CircleAvatar',
+      'SizedBox',
+      'AlertDialog',
+      'TextButton',
+      'Stack',
+      'SingleChildScrollView',
+      'ElevatedButton',
+      'IconButton',
+    ],
+    'description':
+        '''A flutter Screen that have 1 sub screens with multiple widgets to Send
+        image Integrated Web-API and to crop the image with meaningful messages on errors.''',
+    'image_url': 'assets/screenShots/Screen8.1.png',
+    'video_url': 'assets/api-integration.mp4'
+  },
+  {
+    'title': 'Form Validation',
+    'widgets': [
+      'Scaffold',
+      'AppBar',
+      'SingleChildScrollView',
+      'Column',
+      'Text',
+      'SizedBox',
+      'TextFormField',
+      'InputDecoration',
+      'Icon',
+      'Container',
+      'Elevated Button',
+      'SnackBar',
+      'Row',
+      'Checkbox',
+    ],
+    'description':
+        '''The Form shows multiple input methods and any invalidations on 
+        submitting the data like email format, empty fields and strong passwords.''',
+    'image_url': 'assets/screenShots/Screen9.1.png',
+    'video_url': 'assets/form-validation.mp4'
+  },
+  {
+    'title': 'Tab Bars',
+    'widgets': [
+      'Scaffold',
+      'AppBar',
+      'Text',
+      'Drawer',
+      'Center',
+      'Column',
+      'AnimatedContainer',
+      'ElevatedButton',
+      'TabController',
+      'Icon',
+      'SizedBox',
+      'TabBar',
+      'TabBarView',
+      'Tab',
+      'DropDown',
+      'DropdownMenuItem',
+      'FloatingActionButton',
+      'AnimatedAlign',
+      'DatePicker',
+      'Pop-up Button',
+      'CheckboxListTile',
+      'Radio',
+      'ListTile',
+      'Row',
+      'Switch',
+      'GestureDetector',
+    ],
+    'description':
+        '''A flutter Screen that have 2 sub screens with multiple widgets to 
+        show the implementation TabBars with different kinds of widgets and animations.''',
+    'image_url': 'assets/screenShots/Screen9.1.png',
+    'video_url': 'assets/tab-bars.mp4'
+  },
+  {
+    'title': 'Carousel Slider & Video Player',
+    'widgets': [
+      'Carousel Slider',
+      'Video Player',
+      'Drawer',
+    ],
+    'description':
+        'The app contains a drawer with navigation to all assignments and a carousel Slider on screen to display each assignment details and a link to video player screen.',
+    'image_url': 'assets/carousel-slider.png',
+    'video_url': 'assets/carousel-slider.mp4'
+  },
+];
