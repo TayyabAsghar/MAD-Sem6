@@ -207,7 +207,7 @@ submitting the data like email format, empty fields and strong passwords.''',
     'description':
         '''A flutter Screen that have 2 sub screens with multiple widgets to show 
 the implementation TabBars with different kinds of widgets and animations.''',
-    'image_url': 'assets/screenShots/Screen9.1.png',
+    'image_url': 'assets/screenShots/Screen10.jpeg',
     'video_url': 'assets/tab-bars.mp4'
   },
   {
