@@ -227,8 +227,8 @@ const SLIDER_DATA = [
       'GestureDetector',
     ],
     'description':
-        '''A flutter Screen that have 2 sub screens with multiple widgets to 
-        show the implementation TabBars with different kinds of widgets and animations.''',
+        '''A flutter Screen that have 2 sub screens with multiple widgets to show 
+        the implementation TabBars with different kinds of widgets and animations.''',
     'image_url': 'assets/screenShots/Screen9.1.png',
     'video_url': 'assets/tab-bars.mp4'
   },
@@ -240,7 +240,8 @@ const SLIDER_DATA = [
       'Drawer',
     ],
     'description':
-        'The app contains a drawer with navigation to all assignments and a carousel Slider on screen to display each assignment details and a link to video player screen.',
+        '''A flutter Screen that have 2 sub screens to show a carousel Slider on 
+        screen to display each assignment details and a link to video player screen.''',
     'image_url': 'assets/carousel-slider.png',
     'video_url': 'assets/carousel-slider.mp4'
   },
