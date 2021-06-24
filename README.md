@@ -155,5 +155,5 @@ Start developing!
 [screen9.2]: assets/screenShots/Screen9.2.png
 [screen9.3]: assets/screenShots/Screen9.3.png
 [screen9.4]: assets/screenShots/Screen9.4.png
-[screen10.1]: assets/screenShots/Screen10.1.gif
-[screen10.2]: assets/screenShots/Screen10.2.gif
+[screen10.1]: assets/gifs/Screen10.1.gif
+[screen10.2]: assets/gifs/Screen10.2.gif
