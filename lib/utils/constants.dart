@@ -128,7 +128,7 @@ const SLIDER_DATA = [
     'description':
         '''A flutter Screen that have 2 sub screens with multiple widgets to Send 
 & Fetch data from an Integrated Web-API with meaningful messages on errors.''',
-    'image_url': 'assets/screenShots/Screen5.jpg',
+    'image_url': 'assets/screenShots/Screen5.1.jpg',
     'video_url': 'assets/api-integration.mp4'
   },
   {
@@ -156,7 +156,7 @@ const SLIDER_DATA = [
     'description':
         '''A flutter Screen that have 1 sub screens with multiple widgets to Send 
 image Integrated Web-API and to crop the image with meaningful messages on errors.''',
-    'image_url': 'assets/screenShots/Screen8.1.png',
+    'image_url': 'assets/screenShots/Screen6.1.png',
     'video_url': 'assets/api-integration.mp4'
   },
   {
@@ -178,7 +178,7 @@ image Integrated Web-API and to crop the image with meaningful messages on error
     'description':
         '''The Form shows multiple input methods and any invalidations on 
 submitting the data like email format, empty fields and strong passwords.''',
-    'image_url': 'assets/screenShots/Screen9.1.png',
+    'image_url': 'assets/screenShots/Screen7.1.png',
     'video_url': 'assets/form-validation.mp4'
   },
   {
@@ -207,7 +207,7 @@ submitting the data like email format, empty fields and strong passwords.''',
     'description':
         '''A flutter Screen that have 2 sub screens with multiple widgets to show 
 the implementation TabBars with different kinds of widgets and animations.''',
-    'image_url': 'assets/screenShots/Screen10.jpeg',
+    'image_url': 'assets/screenShots/Screen8.jpeg',
     'video_url': 'assets/tab-bars.mp4'
   },
   {
@@ -232,7 +232,7 @@ the implementation TabBars with different kinds of widgets and animations.''',
     'description':
         '''A flutter Screen that have 2 sub screens to show a carousel Slider on 
 screen to display each assignment details and a link to video player screen.''',
-    'image_url': 'assets/screenShots/Screen11.jpeg',
+    'image_url': 'assets/screenShots/Screen9.jpeg',
     'video_url': 'assets/carousel-slider.mp4'
   },
 ];
