@@ -52,31 +52,36 @@ These are some screens and features that has been implemented.
 
 ## 5️⃣ Screen
 
-|              |
-| ------------ |
-| ![][screen5] |
+|                |                |
+| -------------- | -------------- |
+| ![][screen5.1] | ![][screen5.2] |
+
+|                |
+| -------------- |
+| ![][screen5.3] |
 
 ## 6️⃣ Screen
 
-|              |
-| ------------ |
-| ![][screen6] |
+|                |                |
+| -------------- | -------------- |
+| ![][screen6.1] | ![][screen6.2] |
+| ![][screen6.3] | ![][screen6.4] |
+| ![][screen6.5] | ![][screen6.6] |
 
 ## 7️⃣ Screen
 
-|              |
-| ------------ |
-| ![][screen7] |
+|                |                |
+| -------------- | -------------- |
+| ![][screen7.1] | ![][screen7.2] |
+| ![][screen7.3] | ![][screen7.4] |
 
 ## 8️⃣ Screen
 
 |                |                |
 | -------------- | -------------- |
 | ![][screen8.1] | ![][screen8.2] |
-| ![][screen8.3] | ![][screen8.4] |
-| ![][screen8.5] | ![][screen8.6] |
 
-## 9️⃣ Screen
+<!-- ## 9️⃣ Screen
 
 |                |                |
 | -------------- | -------------- |
@@ -87,7 +92,7 @@ These are some screens and features that has been implemented.
 
 |                 |                 |
 | --------------- | --------------- |
-| ![][screen10.1] | ![][screen10.2] |
+| ![][screen10.1] | ![][screen10.2] | -->
 
 # 👽 External API
 
@@ -142,18 +147,18 @@ Start developing!
 [screen4.2]: assets/screenShots/Screen4.2.jpg
 [screen4.3]: assets/screenShots/Screen4.3.jpg
 [screen4.4]: assets/screenShots/Screen4.4.jpg
-[screen5]: assets/screenShots/Screen5.jpg
-[screen6]: assets/screenShots/Screen6.jpg
-[screen7]: assets/screenShots/Screen7.jpg
-[screen8.1]: assets/screenShots/Screen8.1.png
-[screen8.2]: assets/screenShots/Screen8.2.png
-[screen8.3]: assets/screenShots/Screen8.3.png
-[screen8.4]: assets/screenShots/Screen8.4.png
-[screen8.5]: assets/screenShots/Screen8.5.png
-[screen8.6]: assets/screenShots/Screen8.6.png
-[screen9.1]: assets/screenShots/Screen9.1.png
-[screen9.2]: assets/screenShots/Screen9.2.png
-[screen9.3]: assets/screenShots/Screen9.3.png
-[screen9.4]: assets/screenShots/Screen9.4.png
-[screen10.1]: assets/gifs/Screen10.1.gif
-[screen10.2]: assets/gifs/Screen10.2.gif
+[screen5.1]: assets/screenShots/Screen5.1.jpg
+[screen5.2]: assets/screenShots/Screen5.2.jpg
+[screen5.3]: assets/screenShots/Screen5.3.jpg
+[screen6.1]: assets/screenShots/Screen6.1.png
+[screen6.2]: assets/screenShots/Screen6.2.png
+[screen6.3]: assets/screenShots/Screen6.3.png
+[screen6.4]: assets/screenShots/Screen6.4.png
+[screen6.5]: assets/screenShots/Screen6.5.png
+[screen6.6]: assets/screenShots/Screen6.6.png
+[screen7.1]: assets/screenShots/Screen7.1.png
+[screen7.2]: assets/screenShots/Screen7.2.png
+[screen7.3]: assets/screenShots/Screen7.3.png
+[screen7.4]: assets/screenShots/Screen7.4.png
+[screen8.1]: assets/gifs/Screen8.1.gif
+[screen8.2]: assets/gifs/Screen8.2.gif
