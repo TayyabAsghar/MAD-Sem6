@@ -118,6 +118,7 @@ class _AddConsumersState extends State<AddConsumers> {
                         controller: fNameController,
                         textCapitalization: TextCapitalization.words,
                         decoration: InputDecoration(labelText: 'First Name'),
+                        keyboardType: TextInputType.name,
                       ),
                     ),
                   ),
@@ -129,6 +130,7 @@ class _AddConsumersState extends State<AddConsumers> {
                         controller: lNameController,
                         textCapitalization: TextCapitalization.words,
                         decoration: InputDecoration(labelText: 'Last Name'),
+                        keyboardType: TextInputType.name,
                       ),
                     ),
                   ),
@@ -182,6 +184,7 @@ class _AddConsumersState extends State<AddConsumers> {
                     vertical: 4.0,
                   ),
                   child: TextField(
+                    keyboardType: TextInputType.emailAddress,
                     style: TextStyle(fontSize: 20),
                     controller: emailController,
                     decoration: InputDecoration(labelText: 'Email'),
