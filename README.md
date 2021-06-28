@@ -3,9 +3,11 @@
 [![GitHub stars](https://img.shields.io/github/stars/TayyabAsghar/MAD-Sem6?logo=github&style=social)](https://github.com/TayyabAsghar/MAD-Sem6/stargazers)
 ![GitHub all releases](https://img.shields.io/github/downloads/TayyabAsghar/MAD-Sem6/total?logo=github&style=social)
 
+<p align="center">
 <a href= "https://github.com/TayyabAsghar/MAD-Sem6/blob/master/assets/icons/android.png">
 <img src="assets/icons/android.png" alt="drawing" width="200"/>
 </a>
+</p>
 
 # 🔍 Overview
 
