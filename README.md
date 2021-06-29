@@ -83,14 +83,13 @@ These are some screens and features that has been implemented.
 | -------------- | -------------- |
 | ![][screen8.1] | ![][screen8.2] |
 
-<!-- ## 9️⃣ Screen
+## 9️⃣ Screen
 
-|                |                |
-| -------------- | -------------- |
-| ![][screen9.1] | ![][screen9.2] |
-| ![][screen9.3] | ![][screen9.4] |
+|                                                                                     |
+| ----------------------------------------------------------------------------------- |
+| <p align="Center"><img src="assets/gifs/Screen9.gif" height="55%" Width="55%"/></p> |
 
-## 🔟 Screen
+<!-- ## 🔟 Screen
 
 |                 |                 |
 | --------------- | --------------- |
@@ -164,3 +163,4 @@ Start developing!
 [screen7.4]: assets/screenShots/Screen7.4.png
 [screen8.1]: assets/gifs/Screen8.1.gif
 [screen8.2]: assets/gifs/Screen8.2.gif
+[screen9]: assets/gifs/Screen9.gif
