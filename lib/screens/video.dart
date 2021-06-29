@@ -29,6 +29,8 @@ class _VideoState extends State<Video> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor:
+          _controller.value.isInitialized ? Colors.white54 : Colors.white,
       appBar: AppBar(
         title: Text('Video Player'),
       ),

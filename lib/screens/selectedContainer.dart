@@ -91,15 +91,10 @@ class _SelectedContainerState extends State<SelectedContainer> {
                   ),
                 ),
               ),
-              CarouselContainer(
-                color: Colors.blue[900],
-                child: Center(
-                  child: TextButton(
-                    onPressed: () => Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => Video(url: details['video_url']),
-                      ),
-                    ),
+              GestureDetector(
+                child: CarouselContainer(
+                  color: Colors.blue[900],
+                  child: Center(
                     child: Container(
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
@@ -113,6 +108,11 @@ class _SelectedContainerState extends State<SelectedContainer> {
                         ],
                       ),
                     ),
+                  ),
+                ),
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => Video(url: details['video_url']),
                   ),
                 ),
               ),
