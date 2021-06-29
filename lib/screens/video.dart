@@ -32,7 +32,7 @@ class _VideoState extends State<Video> {
       backgroundColor:
           _controller.value.isInitialized ? Colors.white54 : Colors.white,
       appBar: AppBar(
-        title: Text('Video Player'),
+        title: Text('Demo Video'),
       ),
       body: Center(
         child: _controller.value.isInitialized
