@@ -22,7 +22,7 @@ const SLIDER_DATA = [
     'description':
         'A flutter Screen that tell whether the input number is Prime or Composite.',
     'image_url': 'assets/screenShots/Screen1.1.jpg',
-    'video_url': 'assets/api-integration.mp4'
+    'video_url': 'assets/videos/Screen1.mp4'
   },
   {
     'title': 'Navigation Drawer',
@@ -47,7 +47,7 @@ const SLIDER_DATA = [
     'description':
         'A Drawer that connects all the screens and help in navigation between the screens.',
     'image_url': 'assets/screenShots/Screen2.1.jpg',
-    'video_url': 'assets/api-integration.mp4'
+    'video_url': 'assets/videos/Screen2.mp4'
   },
   {
     'title': 'Image Collection',
@@ -73,7 +73,7 @@ const SLIDER_DATA = [
         '''A flutter Screen that have Card Widgets with Images, Images description,
          Icons (related to Images) and Favorite button.''',
     'image_url': 'assets/screenShots/Screen3.1.jpg',
-    'video_url': 'assets/api-integration.mp4'
+    'video_url': 'assets/videos/Screen3.mp4'
   },
   {
     'title': 'Transaction',
@@ -100,7 +100,7 @@ const SLIDER_DATA = [
     'description':
         'A flutter Screen that have multiple widgets to show a Mock Transaction.',
     'image_url': 'assets/screenShots/Screen4.1.jpg',
-    'video_url': 'assets/api-integration.mp4'
+    'video_url': 'assets/videos/Screen4.mp4'
   },
   {
     'title': 'Web-API Integration (for Jason Data)',
@@ -129,7 +129,7 @@ const SLIDER_DATA = [
         '''A flutter Screen that have 2 sub screens with multiple widgets to Send 
 & Fetch data from an Integrated Web-API with meaningful messages on errors.''',
     'image_url': 'assets/screenShots/Screen5.1.jpg',
-    'video_url': 'assets/api-integration.mp4'
+    'video_url': 'assets/videos/Screen5.mp4'
   },
   {
     'title': 'Web-API Integration (for Pictures)',
@@ -157,7 +157,7 @@ const SLIDER_DATA = [
         '''A flutter Screen that have 1 sub screens with multiple widgets to Send 
 image Integrated Web-API and to crop the image with meaningful messages on errors.''',
     'image_url': 'assets/screenShots/Screen6.1.png',
-    'video_url': 'assets/api-integration.mp4'
+    'video_url': 'assets/videos/Screen6.mp4'
   },
   {
     'title': 'Form Validation',
@@ -179,7 +179,7 @@ image Integrated Web-API and to crop the image with meaningful messages on error
         '''The Form shows multiple input methods and any invalidations on 
 submitting the data like email format, empty fields and strong passwords.''',
     'image_url': 'assets/screenShots/Screen7.1.png',
-    'video_url': 'assets/form-validation.mp4'
+    'video_url': 'assets/videos/Screen7.mp4'
   },
   {
     'title': 'Tab Bars',
@@ -208,7 +208,7 @@ submitting the data like email format, empty fields and strong passwords.''',
         '''A flutter Screen that have 2 sub screens with multiple widgets to show 
 the implementation TabBars with different kinds of widgets and animations.''',
     'image_url': 'assets/screenShots/Screen8.jpeg',
-    'video_url': 'assets/tab-bars.mp4'
+    'video_url': 'assets/videos/Screen8.mp4'
   },
   {
     'title': 'Carousel Slider & Video Player',
@@ -233,6 +233,6 @@ the implementation TabBars with different kinds of widgets and animations.''',
         '''A flutter Screen that have 2 sub screens to show a carousel Slider on 
 screen to display each assignment details and a link to video player screen.''',
     'image_url': 'assets/screenShots/Screen9.jpeg',
-    'video_url': 'assets/carousel-slider.mp4'
+    'video_url': 'assets/videos/Screen9.mp4'
   },
 ];
