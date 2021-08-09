@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'theme/ui.dart';
 import 'screens/home.dart';
+import 'screens/streamClock.dart';
 import 'screens/tabBars.dart';
 import 'screens/picture.dart';
 import 'screens/consumers.dart';
@@ -11,6 +11,7 @@ import 'screens/tabWith5Bars.dart';
 import 'screens/tabWith6Bars.dart';
 import 'screens/viewConsumers.dart';
 import 'screens/formValidations.dart';
+import 'package:flutter/material.dart';
 import 'screens/sliderWithVideoPlayer.dart';
 
 void main() {
@@ -28,18 +29,19 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => Home(),
-        '/collection': (context) => Collection(),
-        '/transaction': (context) => Transaction(),
-        '/consumers': (context) => Consumers(),
-        '/view-consumers': (context) => ViewConsumers(),
-        '/add-consumers': (context) => AddConsumers(),
-        '/picture': (context) => Picture(),
-        '/form-validations': (context) => FormValidations(),
-        '/tab-bars': (context) => TabBars(),
-        '/tab-with-5bars': (context) => TabWith5Bars(),
-        '/tab-with-6bars': (context) => TabWith6Bars(),
-        '/slider': (context) => SliderWithVideoPlayer(),
+        '/': (_) => Home(),
+        '/collection': (_) => Collection(),
+        '/transaction': (_) => Transaction(),
+        '/consumers': (_) => Consumers(),
+        '/view-consumers': (_) => ViewConsumers(),
+        '/add-consumers': (_) => AddConsumers(),
+        '/picture': (_) => Picture(),
+        '/form-validations': (_) => FormValidations(),
+        '/tab-bars': (_) => TabBars(),
+        '/tab-with-5bars': (_) => TabWith5Bars(),
+        '/tab-with-6bars': (_) => TabWith6Bars(),
+        '/slider': (_) => SliderWithVideoPlayer(),
+        '/clock': (_) => Clock(),
       },
     );
   }

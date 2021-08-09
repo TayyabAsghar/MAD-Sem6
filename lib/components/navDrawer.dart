@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'customAlertDialog.dart';
+import 'package:flutter/material.dart';
 
 class NavDrawer extends StatelessWidget {
   final _fontSize = 16.0;
@@ -313,6 +313,26 @@ class NavDrawer extends StatelessWidget {
 
             if (_currentRoute != '/slider')
               Navigator.pushNamed(context, '/slider');
+          },
+        ),
+        ListTile(
+          leading: Icon(Icons.query_builder),
+          title: Text(
+            'Clock',
+            style: TextStyle(
+              fontSize: _fontSize,
+              color: _currentRoute == '/clock'
+                  ? Theme.of(context).primaryColor
+                  : Colors.grey[600],
+            ),
+          ),
+          selectedTileColor: Theme.of(context).primaryColor.withOpacity(0.3),
+          selected: _currentRoute == '/clock',
+          onTap: () {
+            Navigator.pop(context);
+
+            if (_currentRoute != '/clock')
+              Navigator.pushNamed(context, '/clock');
           },
         ),
         Divider(
