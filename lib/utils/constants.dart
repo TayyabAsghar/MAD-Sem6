@@ -250,7 +250,7 @@ screen to display each assignment details and a link to video player screen.''',
     ],
     'description':
         '''A flutter Screen that shows a clock made by a constant stream of Futures.''',
-    'image_url': 'assets/screenShots/Screen10.jpeg',
+    'image_url': 'assets/screenShots/Screen10.png',
     'video_url': 'assets/videos/Screen10.mp4'
   },
 ];
