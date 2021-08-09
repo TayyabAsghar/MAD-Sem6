@@ -89,11 +89,11 @@ These are some screens and features that has been implemented.
 | ----------------------------------------------------------------------------------- |
 | <p align="Center"><img src="assets/gifs/Screen9.gif" height="55%" Width="55%"/></p> |
 
-<!-- ## 🔟 Screen
+## 🔟 Screen
 
-|                 |                 |
-| --------------- | --------------- |
-| ![][screen10.1] | ![][screen10.2] | -->
+|                                                              |
+| ------------------------------------------------------------ |
+| <p align="Center"><img src="assets/gifs/Screen10.gif" /></p> |
 
 # 👽 External API
 
@@ -164,3 +164,4 @@ Start developing!
 [screen8.1]: assets/gifs/Screen8.1.gif
 [screen8.2]: assets/gifs/Screen8.2.gif
 [screen9]: assets/gifs/Screen9.gif
+[screen10]: assets/gifs/Screen10.gif
