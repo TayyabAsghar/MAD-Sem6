@@ -235,4 +235,22 @@ screen to display each assignment details and a link to video player screen.''',
     'image_url': 'assets/screenShots/Screen9.jpeg',
     'video_url': 'assets/videos/Screen9.mp4'
   },
+  {
+    'title': 'Stream Clock',
+    'widgets': [
+      'Icon',
+      'Drawer',
+      'Center',
+      'Stream',
+      'Stream Builder',
+      'Scaffold',
+      'Future',
+      'AppBar',
+      'Text',
+    ],
+    'description':
+        '''A flutter Screen that shows a clock made by a constant stream of Futures.''',
+    'image_url': 'assets/screenShots/Screen10.jpeg',
+    'video_url': 'assets/videos/Screen10.mp4'
+  },
 ];
